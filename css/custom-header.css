@@ -1,0 +1,252 @@
+/* Custom Header Styles */
+
+/* General Resets for Header */
+#custom-header {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+}
+
+#custom-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#custom-header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Bar - Brand Red */
+.top-bar {
+    background-color: #cf2e2e;
+    /* Ademincol Red */
+    color: #fff;
+    /* White text for contrast */
+    padding: 10px 0 50px 0;
+    /* Keeping straddle padding */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-bar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar .contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.top-bar .contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+}
+
+.top-bar .contact-info i {
+    color: #fff;
+    /* White icons */
+}
+
+.top-bar .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.top-bar .social-icons a {
+    color: #fff;
+    /* White social icons */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.top-bar .social-icons a:hover {
+    color: #000;
+    /* Black hover for contrast on red */
+}
+
+/* Entrance Animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Floating Navigation */
+/* Floating Navigation */
+.main-nav-container {
+    position: absolute;
+    /* Default: Scroll with page, overlapping top bar */
+    width: 100%;
+    top: 45px;
+    /* Overlaps lower part of Top Bar */
+    left: 0;
+    z-index: 998;
+    transition: top 0.3s ease-in-out;
+    /* Smooth transition for stickiness */
+    animation: slideDown 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.main-nav-container.is-sticky {
+    position: fixed;
+    /* Locked to viewport */
+    top: 0;
+    /* Flush with top */
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Add shadow to container when compact */
+    z-index: 1000;
+}
+
+.floating-nav {
+    max-width: 1200px;
+    /* Contained width like reference */
+    width: 90%;
+    margin: 0 auto;
+
+    /* Modern Boxed Style */
+    background: #fff;
+    /* Solid white like reference */
+    border-radius: 4px;
+    /* Sharp corners for professional boxed look */
+    border: none;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Clean shadow */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
+    /* Ultra-smooth transition for "dynamic" feel */
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: top center;
+}
+
+/* Transformation on Sticky */
+.main-nav-container.is-sticky .floating-nav {
+    width: 100%;
+    max-width: none;
+    /* Override container width */
+    border-radius: 0;
+    /* Square corners */
+    margin: 0;
+    padding: 10px 50px;
+    /* Adjust padding for full width */
+    box-shadow: none;
+    /* Shadow handled by container or removed for flat look */
+}
+
+.floating-nav:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.floating-nav .logo img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.floating-nav .nav-links {
+    display: flex;
+    gap: 30px;
+    /* More space between items */
+}
+
+.floating-nav .nav-links li a {
+    color: #333;
+    font-weight: 600;
+    /* Stronger font weight */
+    font-size: 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+    /* Add scale transition */
+    display: inline-block;
+}
+
+/* Clean Underline Effect */
+.floating-nav .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #cf2e2e;
+    /* Ademincol Red */
+    transition: width 0.3s ease;
+}
+
+.floating-nav .nav-links li a:hover {
+    color: #cf2e2e;
+    transform: translateY(-2px);
+    /* Subtle lift on hover */
+}
+
+.floating-nav .nav-links li a:hover::after {
+    width: 100%;
+    /* Underline effect */
+}
+
+/* Responsive Handling */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .floating-nav {
+        padding: 10px 20px;
+        border-radius: 4px;
+        margin: 0 10px;
+    }
+
+    .main-nav-container {
+        position: relative;
+        top: 0;
+        margin-top: 10px;
+        animation: none;
+    }
+
+    .floating-nav .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .floating-nav .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
