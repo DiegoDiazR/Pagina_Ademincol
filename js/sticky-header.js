@@ -1,7 +1,39 @@
+// Mobile menu toggle
+(function () {
+    'use strict';
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.floating-nav .nav-links');
+    if (!toggle || !navLinks) return;
+
+    toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+
+    // Mega menu toggle on mobile (tap on "Servicios")
+    const dropdownTrigger = document.querySelector('.nav-item-dropdown .nav-link-dropdown');
+    const dropdownItem = document.querySelector('.nav-item-dropdown');
+    if (dropdownTrigger && dropdownItem) {
+        dropdownTrigger.addEventListener('click', function (e) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                dropdownItem.classList.toggle('open');
+            }
+        });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('#custom-header')) {
+            navLinks.classList.remove('active');
+            if (dropdownItem) dropdownItem.classList.remove('open');
+        }
+    });
+})();
+
 // Smart Sticky Header with requestAnimationFrame throttling and optimized performance
 (function() {
     'use strict';
-    
+
     const header = document.querySelector('.main-nav-container');
     if (!header) return;
 
