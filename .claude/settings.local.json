@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(python fix_paths.py)",
+      "Bash(del \"c:/Users/Diego/Desktop/Pagina_Ademincol/fix_paths.py\")",
+      "Bash(python3 -:*)"
+    ]
+  }
+}
