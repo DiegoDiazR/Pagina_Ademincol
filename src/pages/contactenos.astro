@@ -1,0 +1,373 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout
+	title="PQRSF / Contacto - Ademincol SA"
+	description="Nos interesa conocer sus peticiones, quejas, reclamos y felicitaciones. Contáctenos para solicitar cotizaciones o enviar su PQRSF."
+	canonical="https://ademincol.com.co/contactenos.html"
+	ogTitle="PQRSF / Contacto - Ademincol SA"
+	ogDescription="Contáctenos para solicitar cotizaciones o enviar su PQRSF."
+>
+	<main>
+		<Hero
+			variant="red"
+			title="PQRSF / Contáctenos"
+			subtitle="Nos interesa conocer sus peticiones, quejas, reclamos y felicitaciones. También puede solicitar una cotización."
+		/>
+
+		<section class="contact-body">
+			<!-- Info column -->
+			<div class="contact-info-col">
+				<h2>Información de contacto</h2>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+					<div class="ci-text">
+						<strong>Dirección</strong>
+						<span>Calle 163 #16A-63, Toberín<br>Bogotá D.C., Colombia</span>
+					</div>
+				</div>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+					<div class="ci-text">
+						<strong>Teléfono fijo</strong>
+						<span>+601 7943489</span>
+					</div>
+				</div>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-mobile-alt"></i></div>
+					<div class="ci-text">
+						<strong>Celular</strong>
+						<span>+57 311 485 0295</span>
+					</div>
+				</div>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-envelope"></i></div>
+					<div class="ci-text">
+						<strong>Correo electrónico</strong>
+						<span>pqrsf@ademincol.com.co</span>
+					</div>
+				</div>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-user-tie"></i></div>
+					<div class="ci-text">
+						<strong>Coordinadora Comercial</strong>
+						<span>Lizeth Nathalia Páez<br>comercial1@ademincol.com.co<br>+57 320 327 1240</span>
+					</div>
+				</div>
+
+				<div class="contact-info-item">
+					<div class="ci-icon"><i class="fas fa-user"></i></div>
+					<div class="ci-text">
+						<strong>Asuntos Legales</strong>
+						<span>area.juridico@ademincol.com.co</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Form column -->
+			<div class="contact-form-col">
+				<h2>Envíenos su solicitud</h2>
+
+				<div class="contact-tabs">
+					<div class="contact-tab active" onclick="switchTab('cotizacion')">Solicitar Cotización</div>
+					<div class="contact-tab" onclick="switchTab('pqrs')">PQRSF</div>
+				</div>
+
+				<!-- Cotización -->
+				<div id="panel-cotizacion" class="contact-form-panel active">
+					<form id="form-cotizacion" novalidate>
+						<div class="form-group">
+							<label for="alcance">Alcance del servicio *</label>
+							<input type="text" id="alcance" name="alcance" placeholder="Describa el servicio requerido" required />
+						</div>
+						<div class="form-group">
+							<label for="ubicacion">Ubicación *</label>
+							<input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad / Departamento" required />
+						</div>
+
+						<div class="form-row">
+							<div class="form-group">
+								<label for="rut">RUT *</label>
+								<input type="text" id="rut" name="rut" required />
+							</div>
+							<div class="form-group">
+								<label for="hse">¿Requiere apoyo HSE?</label>
+								<select id="hse" name="hse">
+									<option value="no">No</option>
+									<option value="si">Sí</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cot-correo">Correo electrónico *</label>
+							<input type="email" id="cot-correo" name="correo" placeholder="Para responderle a esta dirección" required />
+						</div>
+						<div class="form-group">
+							<label for="otros">Otros requerimientos</label>
+							<textarea id="otros" name="otros" placeholder="Especifique cualquier requerimiento adicional"></textarea>
+						</div>
+						<button type="submit" class="btn-submit">Enviar Solicitud</button>
+						<p class="form-status" data-status></p>
+					</form>
+				</div>
+
+				<!-- PQRSF -->
+				<div id="panel-pqrs" class="contact-form-panel">
+					<form id="form-pqrsf" novalidate enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="pqrs-tipo">Tipo de solicitud *</label>
+							<select id="pqrs-tipo" name="tipo" required>
+								<option value="peticion">Petición</option>
+								<option value="queja">Queja</option>
+								<option value="reclamo">Reclamo</option>
+								<option value="sugerencia">Sugerencia</option>
+								<option value="felicitacion">Felicitación</option>
+							</select>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="nombre">Nombre completo *</label>
+								<input type="text" id="nombre" name="nombre" required />
+							</div>
+							<div class="form-group">
+								<label for="telefono">Teléfono</label>
+								<input type="tel" id="telefono" name="telefono" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="correo">Correo electrónico *</label>
+							<input type="email" id="correo" name="correo" required />
+						</div>
+						<div class="form-group">
+							<label for="descripcion">Descripción *</label>
+							<textarea id="descripcion" name="descripcion" placeholder="Describa su solicitud en detalle" required></textarea>
+						</div>
+						<div class="form-group">
+							<label for="documentos">Documentos adjuntos</label>
+							<input type="file" id="documentos" name="documentos" multiple />
+						</div>
+						<button type="submit" class="btn-submit">Enviar PQRSF</button>
+						<p class="form-status" data-status></p>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-map-section">
+			<h2 style="color: red;">¿Dónde Estamos?</h2>
+			<iframe
+				src="https://maps.google.com/maps?q=Calle+163+%2316A-63+Toberin+Bogota+Colombia&output=embed&hl=es"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+				title="Ubicación Sede Principal Ademincol"></iframe>
+		</section>
+	</main>
+
+	<!-- Tabs switcher -->
+	<script is:inline>
+		function switchTab(tab) {
+			document.querySelectorAll('.contact-tab').forEach(function (t, i) {
+				t.classList.toggle('active', (i === 0 && tab === 'cotizacion') || (i === 1 && tab === 'pqrs'));
+			});
+			document.getElementById('panel-cotizacion').classList.toggle('active', tab === 'cotizacion');
+			document.getElementById('panel-pqrs').classList.toggle('active', tab === 'pqrs');
+		}
+	</script>
+
+	<!-- Backend submission de los formularios -->
+	<script src="/js/forms-submit.js" is:inline defer></script>
+</Layout>
+
+<style is:global>
+	/* Contact page styles */
+	.contact-body {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 70px 20px 80px;
+		display: grid;
+		grid-template-columns: 1fr 1.4fr;
+		gap: 60px;
+		align-items: start;
+	}
+	.contact-info-col h2 {
+		font-family: Barlow, sans-serif;
+		font-size: 22px;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 28px;
+	}
+	.contact-info-item {
+		display: flex;
+		gap: 14px;
+		margin-bottom: 24px;
+		align-items: flex-start;
+	}
+	.contact-info-item .ci-icon {
+		width: 42px;
+		height: 42px;
+		background: #fdf0f0;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #cf2e2e;
+		font-size: 16px;
+		flex-shrink: 0;
+	}
+	.contact-info-item .ci-text strong {
+		display: block;
+		font-size: 13px;
+		font-weight: 600;
+		color: #888;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		margin-bottom: 3px;
+	}
+	.contact-info-item .ci-text span {
+		font-size: 15px;
+		color: #333;
+		line-height: 1.5;
+	}
+	.contact-form-col h2 {
+		font-family: Barlow, sans-serif;
+		font-size: 22px;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin: 0 0 28px;
+	}
+	.contact-tabs {
+		display: flex;
+		gap: 0;
+		margin-bottom: 28px;
+		border-bottom: 2px solid #e8e8e8;
+	}
+	.contact-tab {
+		padding: 10px 24px;
+		font-size: 14px;
+		font-weight: 600;
+		cursor: pointer;
+		color: #888;
+		border-bottom: 2px solid transparent;
+		margin-bottom: -2px;
+		transition: color .2s, border-color .2s;
+		user-select: none;
+	}
+	.contact-tab.active {
+		color: #cf2e2e;
+		border-bottom-color: #cf2e2e;
+	}
+	.contact-form-panel {
+		display: none;
+	}
+	.contact-form-panel.active {
+		display: block;
+	}
+	.form-group {
+		margin-bottom: 16px;
+	}
+	.form-group label {
+		display: block;
+		font-size: 13px;
+		font-weight: 600;
+		color: #555;
+		margin-bottom: 6px;
+	}
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		width: 100%;
+		padding: 10px 14px;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		font-size: 14px;
+		font-family: Poppins, sans-serif;
+		color: #333;
+		box-sizing: border-box;
+		transition: border-color .2s;
+	}
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #cf2e2e;
+	}
+	.form-group textarea {
+		min-height: 90px;
+		resize: vertical;
+	}
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+	}
+	.btn-submit {
+		background: #cf2e2e;
+		color: #fff;
+		border: none;
+		padding: 13px 32px;
+		border-radius: 6px;
+		font-size: 15px;
+		font-weight: 600;
+		font-family: Poppins, sans-serif;
+		cursor: pointer;
+		width: 100%;
+		transition: background .2s;
+		margin-top: 8px;
+	}
+	.btn-submit:hover {
+		background: #a52020;
+	}
+	.btn-submit:disabled {
+		background: #888;
+		cursor: not-allowed;
+	}
+	.form-status {
+		margin: 12px 0 0;
+		font-size: 14px;
+		min-height: 18px;
+	}
+	.form-status--success { color: #1e7a3b; }
+	.form-status--error   { color: #b30000; }
+	.form-status--info    { color: #1E3056; }
+	.contact-map-section {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 20px 80px;
+	}
+	.contact-map-section h2 {
+		font-family: Barlow, sans-serif;
+		font-size: 38px;
+		font-weight: 800;
+		color: #cf2e2e;
+		text-align: center;
+		margin: 0 0 28px;
+	}
+	.contact-map-section iframe {
+		width: 100%;
+		height: 400px;
+		border: 0;
+		border-radius: 16px;
+		display: block;
+	}
+	@media (max-width: 768px) {
+		.contact-body {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			padding: 50px 20px 60px;
+		}
+		.form-row { grid-template-columns: 1fr; }
+		.contact-map-section {
+			padding: 0 20px 60px;
+		}
+		.contact-map-section iframe {
+			height: 300px;
+		}
+	}
+</style>

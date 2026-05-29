@@ -1,0 +1,153 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+
+const servicios = [
+	{ slug: 'servicio-tecnicas-inspeccion-end',     num: '01', icon: 'fa-search',           titulo: 'Técnicas de Inspección — END',                         desc: 'Ensayos No Destructivos en sus líneas convencional y emergente: VT, PT, UT, MT, RT, TOFD, PAUT, ACFM, MFL, RFET, ondas guiadas y nuevas tecnologías.' },
+	{ slug: 'servicio-caracterizacion-materiales',  num: '02', icon: 'fa-flask',            titulo: 'AFAs y Caracterización de Materiales',                 desc: 'Análisis estructural, propiedades mecánicas y composición química in situ mediante microscopía, durezas, XRF, OES y LIBS.' },
+	{ slug: 'servicio-evaluacion-integridad',       num: '03', icon: 'fa-shield-alt',       titulo: 'Evaluación y Diagnóstico de Integridad de Activos',    desc: 'Inspección y diagnóstico bajo API 510, 570, 653, Fitness For Service API RP 579/ASME FFS-1 e Inspección Basada en Riesgo API 580/581.' },
+	{ slug: 'servicio-ffs-simulacion',              num: '04', icon: 'fa-cubes',            titulo: 'FFS — Simulación por Elementos Finitos',               desc: 'Evaluación de aptitud para el servicio bajo API 579-1 / ASME FFS-1: grietas, corrosión, laminaciones, fatiga y deformaciones.' },
+	{ slug: 'servicio-gestion-activos',             num: '05', icon: 'fa-project-diagram',  titulo: 'Gestión de Activos',                                   desc: 'Análisis estructural de líneas a partir de ILI por pérdida de metal, agrietamiento, abolladuras y deformaciones por curvado.' },
+	{ slug: 'servicio-inspeccion-drones',           num: '06', icon: 'fa-helicopter',       titulo: 'Inspección y Levantamiento Mediante Drones',           desc: 'Inspección visual remota, termografía, aerofotogrametría, LiDAR, modelamiento 3D y monitoreo de ductos y derecho de vía.' },
+	{ slug: 'servicio-qaqc-soldadura',              num: '07', icon: 'fa-fire',             titulo: 'Aseguramiento de Calidad — Soldadura (QAQC)',          desc: 'Control de calidad QA/QC de obras: supervisión mecánica, civil, eléctrica e instrumentación bajo AWS, ASME, ASTM y RETIE.' },
+	{ slug: 'servicio-proteccion-catodica',         num: '08', icon: 'fa-bolt',             titulo: 'Evaluación de Sistemas de Protección Catódica',        desc: 'Diagnóstico de protección catódica: rectificadores, ánodos, CIPS, DCVG, PCM-ACVG, ECDA y resistividad de suelos.' },
+	{ slug: 'servicio-corrosion-interna',           num: '09', icon: 'fa-tint',             titulo: 'Monitoreo y Evaluación de Corrosión Interna',          desc: 'Monitoreo de mecanismos de corrosión interna: análisis fisicoquímico, microbiológico, cromatografía, cupones y química preventiva.' },
+	{ slug: 'servicio-desarrollo-software',         num: '10', icon: 'fa-laptop-code',      titulo: 'Desarrollo de Software a la Medida',                   desc: 'Soluciones de software para gestión de inspección y activos: bases SQL/NoSQL, análisis en R/Python, herramientas de análisis de riesgo.' },
+	{ slug: 'servicio-rbi-api580',                  num: '11', icon: 'fa-chart-pie',        titulo: 'Inspección Basada en Riesgo — API 580',                desc: 'Metodología RBI bajo API 580/581 y API 1160: definición de áreas de alta consecuencia, análisis de amenazas y planeación de inspección.' },
+];
+---
+<Layout
+	title="Servicios - Ademincol SA"
+	description="Soluciones especializadas en inspección, ensayos no destructivos, control de calidad y gestión de activos industriales, certificados bajo normas internacionales."
+	canonical="https://ademincol.com.co/servicios.html"
+>
+	<main>
+		<Hero
+			variant="red"
+			title="Nuestros Servicios"
+			subtitle="Soluciones especializadas en inspección, ensayos no destructivos, control de calidad y gestión de activos industriales, certificados bajo normas internacionales."
+		/>
+
+		<section class="services-grid-section">
+			<h2>11 áreas de especialización</h2>
+			<div class="services-cards-grid">
+				{servicios.map((s) => (
+					<a href={`/Servicios/${s.slug}.html`} class="service-card">
+						<div class="card-number">Servicio {s.num}</div>
+						<div class="card-icon"><i class={`fas ${s.icon}`}></i></div>
+						<h3>{s.titulo}</h3>
+						<p>{s.desc}</p>
+						<span class="card-link">Ver servicio <i class="fas fa-arrow-right"></i></span>
+					</a>
+				))}
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style is:global>
+	.services-grid-section {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 60px 20px 80px;
+	}
+	.services-grid-section h2 {
+		font-family: Barlow, sans-serif;
+		font-size: 14px;
+		color: #cf2e2e;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.services-cards-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+		gap: 24px;
+	}
+	.service-card {
+		background: #fff;
+		border: 1px solid #e8e8e8;
+		border-radius: 12px;
+		padding: 32px 24px;
+		text-decoration: none;
+		color: #333;
+		transition: transform .2s, box-shadow .2s, border-color .2s;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		overflow: hidden;
+	}
+	.service-card::before {
+		content: '';
+		position: absolute;
+		top: 0; left: 0;
+		width: 4px; height: 100%;
+		background: #cf2e2e;
+		transform: scaleY(0);
+		transition: transform .2s;
+		transform-origin: bottom;
+	}
+	.service-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+		border-color: #cf2e2e;
+	}
+	.service-card:hover::before {
+		transform: scaleY(1);
+	}
+	.card-number {
+		font-size: 12px;
+		color: #cf2e2e;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 14px;
+	}
+	.card-icon {
+		width: 56px;
+		height: 56px;
+		background: #fdf0f0;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		font-size: 22px;
+		color: #cf2e2e;
+	}
+	.service-card h3 {
+		font-family: Barlow, sans-serif;
+		font-size: 19px;
+		font-weight: 700;
+		margin: 0 0 10px;
+		color: #1a1a1a;
+		line-height: 1.3;
+	}
+	.service-card p {
+		font-size: 13px;
+		color: #666;
+		line-height: 1.65;
+		flex: 1;
+		margin: 0 0 20px;
+	}
+	.card-link {
+		font-size: 13px;
+		color: #cf2e2e;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.card-link i {
+		font-size: 11px;
+		transition: transform .2s;
+	}
+	.service-card:hover .card-link i {
+		transform: translateX(4px);
+	}
+	@media (max-width: 600px) {
+		.services-cards-grid { grid-template-columns: 1fr; }
+	}
+</style>

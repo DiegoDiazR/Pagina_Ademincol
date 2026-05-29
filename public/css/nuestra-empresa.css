@@ -1,0 +1,724 @@
+/* Nuestra Empresa - Content Sections */
+
+.about-page-content {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header .eyebrow {
+    display: block;
+    color: #cf2e2e;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-header h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(32px, 5vw, 42px);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.about-header h2 span { color: #cf2e2e; }
+
+/* Mission Cards */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mission-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.mission-card .icon-box {
+    width: 60px; height: 60px;
+    background: #fdf0f0;
+    border-radius: 15px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 25px;
+}
+
+.mission-card .icon-box i { color: #cf2e2e; font-size: 24px; }
+
+.mission-card h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.mission-card p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.mission-card ul {
+    list-style: none; padding: 0; margin-top: auto;
+}
+
+.mission-card ul li {
+    font-size: 14px; color: #555;
+    margin-bottom: 10px;
+    display: flex; align-items: flex-start; gap: 10px;
+}
+
+.mission-card ul li i { color: #cf2e2e; margin-top: 3px; font-size: 12px; }
+
+/* Infrastructure */
+.infra-section { background-color: #f9fafb; }
+.infra-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+
+@media (max-width: 991px) {
+    .infra-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.infra-image {
+    border-radius: 25px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.infra-image img { width: 100%; display: block; }
+
+.infra-content h3 {
+    font-family: 'Barlow', sans-serif; font-size: 30px; font-weight: 700; margin-bottom: 20px;
+}
+
+.infra-list { list-style: none; padding: 0; margin-top: 30px; }
+.infra-list li { display: flex; gap: 15px; margin-bottom: 25px; }
+.infra-list li i { color: #cf2e2e; font-size: 20px; margin-top: 5px; }
+.infra-list li strong { display: block; font-size: 18px; color: #111; }
+.infra-list li span { font-size: 15px; color: #666; }
+
+/* Values */
+.values-section { background-color: #fff; }
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+}
+.value-icon {
+    flex-shrink: 0;
+    width: 80px; height: 80px; background: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 20px rgba(207, 46, 46, 0.1);
+}
+.value-icon i { color: #cf2e2e; font-size: 30px; }
+.value-item-content { flex: 1; min-width: 0; }
+.value-item h4 { font-family: 'Barlow', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+.value-item p { font-size: 15px; color: #666; max-width: none; margin: 0; line-height: 1.6; }
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .value-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+    .value-item p { max-width: 320px; margin: 0 auto; }
+}
+/* Mission & Vision Section */
+.mission-vision-section {
+    padding: 100px 20px;
+    background-color: #fbfbfb;
+}
+
+.mission-vision-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Location Section */
+.location-section {
+    padding: 100px 20px;
+    background-color: #fbfbfb;
+}
+
+.location-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.location-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+}
+
+.loc-icon {
+    width: 46px;
+    height: 46px;
+    background: #fdf0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cf2e2e;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.loc-text strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.loc-text span {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.location-map {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .about-section { padding: 60px 20px; }
+    .mission-vision-section { padding: 60px 20px; }
+    .location-section { padding: 60px 20px; }
+    .location-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/*Numeros de marca*/
+.brand-strip {
+    background-color: #ffffff;
+    border-top: 3px solid #cf2e2e;
+    padding: 52px 20px;
+}
+
+.brand-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.brand-strip-item {
+    text-align: center;
+}
+
+.brand-strip-item strong {
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(42px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1;
+    color: #cf2e2e;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.brand-strip-item span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.brand-strip-divider {
+    width: 1px;
+    height: 56px;
+    background: #2e2e2e;
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .brand-strip-divider { display: none; }
+    .brand-strip-inner { gap: 36px; justify-content: center; }
+    .brand-strip-item { min-width: 130px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRESENCIA INTERNACIONAL — Mapa del mundo
+   ───────────────────────────────────────────────────────────── */
+.presence-section {
+    position: relative;
+    padding: 100px 0 70px;
+    margin-top: 80px;
+    background: #242424;
+    color: #fff;
+    overflow: hidden;
+}
+
+.presence-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(207, 46, 46, 0.10) 0%, transparent 42%),
+        radial-gradient(circle at 80% 82%, rgba(74, 121, 64, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.presence-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.presence-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.presence-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #cf2e2e;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.presence-header h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(28px, 4.5vw, 44px);
+    font-weight: 800;
+    margin: 0 0 16px;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.presence-header h2.presence-tagline {
+    font-size: clamp(22px, 3.4vw, 34px);
+    font-weight: 700;
+    margin: 0 0 14px;
+    letter-spacing: 1px;
+}
+
+.presence-header h2 .accent {
+    color: #cf2e2e;
+}
+
+.presence-subtitle {
+    color: #fff;
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+/* KPIs */
+.presence-stats {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    margin: 0 auto 56px;
+    max-width: 760px;
+    padding: 26px 24px;
+}
+
+.stat-card {
+    flex: 1;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.stat-card .stat-num {
+    display: block;
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.stat-card .stat-label {
+    display: block;
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.stat-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+}
+
+/* Mapa */
+.presence-map-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 56px;
+    padding: 28px 28px 24px;
+}
+
+.presence-map {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+}
+
+.presence-map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Imagen gris con transparencia; brightness sube los grises sobre el fondo oscuro */
+    opacity: 0.88;
+    filter: brightness(1.05) contrast(0.95);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Markers absolutos en %, escalan con la imagen */
+.map-marker {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1;
+}
+
+/* Punto rojo */
+.map-marker::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 9px;
+    height: 9px;
+    background: #cf2e2e;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 0 2px rgba(207, 46, 46, 0.18);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* Halo pulsante */
+.map-marker::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 9px;
+    height: 9px;
+    background: #cf2e2e;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: presence-pulse 2.4s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes presence-pulse {
+    0%   { transform: scale(1);   opacity: 0.5; }
+    100% { transform: scale(3.2); opacity: 0;   }
+}
+
+/* Sede (Colombia) */
+.map-marker.is-home {
+    width: 18px;
+    height: 18px;
+    z-index: 3;
+}
+
+.map-marker.is-home::before {
+    width: 12px;
+    height: 12px;
+    background: #ffd166;
+    border-color: #fff;
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.2);
+}
+
+.map-marker.is-home::after {
+    width: 12px;
+    height: 12px;
+    background: #ffd166;
+    opacity: 0.55;
+}
+
+/* Hover / focus */
+.map-marker:hover,
+.map-marker:focus-visible {
+    z-index: 50;
+}
+
+.map-marker:hover::before,
+.map-marker:focus-visible::before {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 4px rgba(207, 46, 46, 0.35);
+}
+
+.map-marker.is-home:hover::before,
+.map-marker.is-home:focus-visible::before {
+    box-shadow: 0 0 0 5px rgba(255, 209, 102, 0.4);
+}
+
+.map-marker:focus-visible {
+    outline: none;
+}
+
+/* Tooltip con el nombre del país (span hijo del botón) */
+.map-tooltip {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    line-height: 1.45;
+    padding: 10px 13px;
+    border-radius: 6px;
+    min-width: 220px;
+    max-width: 290px;
+    text-align: left;
+    white-space: normal;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 4;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.map-tooltip .tt-country {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #ffd166;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.map-tooltip .tt-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.88);
+    word-break: break-word;
+}
+
+.map-tooltip .tt-row i {
+    color: #cf2e2e;
+    font-size: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 12px;
+    text-align: center;
+}
+
+.map-marker.is-home .map-tooltip .tt-country {
+    color: #fff;
+}
+
+.map-marker.is-home .map-tooltip .tt-row i {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.map-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1a1a1a;
+}
+
+.map-marker:hover .map-tooltip,
+.map-marker:focus-visible .map-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.map-marker.is-home .map-tooltip {
+    background: #cf2e2e;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.map-marker.is-home .map-tooltip::after {
+    border-top-color: #cf2e2e;
+}
+
+/* Lista de países */
+.presence-countries {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.presence-countries h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 22px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.country-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #e2e2e2;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    cursor: default;
+}
+
+.country-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(207, 46, 46, 0.35);
+    transform: translateY(-2px);
+}
+
+.country-chip i {
+    color: #cf2e2e;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.country-chip.is-home {
+    background: rgba(207, 46, 46, 0.14);
+    border-color: rgba(207, 46, 46, 0.4);
+    color: #fff;
+    font-weight: 600;
+}
+
+.country-chip.is-home i {
+    color: #ffd166;
+}
+
+.country-chip .badge-home {
+    margin-left: auto;
+    background: #cf2e2e;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    /* Re-aserción defensiva: nunca dejar caer el fondo oscuro ni el texto blanco */
+    .presence-section {
+        background-color: #242424;
+        color: #fff;
+        padding: 70px 0 50px;
+    }
+    .presence-tagline,
+    .presence-subtitle,
+    .presence-main,
+    .stat-card .stat-num,
+    .stat-card .stat-label {
+        color: #fff;
+    }
+    .presence-stats {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px;
+    }
+    .stat-divider {
+        width: 60%;
+        height: 1px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .presence-map-wrapper {
+        padding: 12px 0 8px;
+        border-radius: 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    .presence-map {
+        min-width: 720px;
+        padding: 0 14px;
+    }
+    .countries-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+    .country-chip { padding: 10px 12px; font-size: 13px; }
+}

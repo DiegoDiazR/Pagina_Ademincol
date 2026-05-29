@@ -1,0 +1,52 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/05.Assessment';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Seguimiento_topografico.jpeg`, alt: 'Seguimiento topográfico de líneas y activos' },
+];
+
+const capacidades = [
+	{ titulo: 'Validación Corrida ILI — API 1163', detalle: 'Análisis de incertidumbre, error de medición y concepto técnico de aceptación.' },
+	{ titulo: 'Assessment por Pérdida de Metal', detalle: 'Tasas pit-to-pit, CGA, presiones seguras (ASME B31G/B31.4), ERF, criticidad y proyección a 5 años.' },
+	{ titulo: 'Assessment por Agrietamiento', detalle: 'API 579, modelos de crecimiento por fatiga (API 5L), cálculo de K, predicción de ciclos y año de falla.' },
+	{ titulo: 'Assessment por Bending Strain', detalle: 'Identificación de zonas con desplazamiento, evaluación de umbrales tensión/compresión y monitoreo.' },
+	{ titulo: 'Distorsiones de Diámetro (Abolladuras)', detalle: 'Evaluación bajo ASME B31.8 Ap. R y API RP 1183, FAD (BS 7910 / API 579), reparación o monitoreo.' },
+	{ titulo: 'Deformaciones por Curvado y Movimiento', detalle: 'Evaluación contra umbrales de capacidad y proyección de crecimiento con línea base.' },
+	{ titulo: 'Modelación Fitness for Service', detalle: 'Software especializado (SignalTM, FlawCheck o equivalente) para aptitud para el servicio.' },
+	{ titulo: 'Plan Multianual de Reparación', detalle: 'Optimización de paquetes de intervención, proyección a 5 años, integración BD + GIS.' },
+	{ titulo: 'Alineación Multianual', detalle: 'Emparejamiento histórico de anomalías, correlación geoespacial y base evolutiva.' },
+	{ titulo: 'Vida Remanente', detalle: 'Modelos determinísticos y probabilísticos, optimización de paquetes multianuales.' },
+	{ titulo: 'Condición Mecánica', detalle: 'Evaluación integral del estado mecánico de líneas y estructuras.' },
+	{ titulo: 'Assessment de Estructuras', detalle: 'Análisis estructural completo de líneas y soportes.' },
+];
+---
+<ServiceLayout
+	title="Gestión de Activos — Análisis Estructural de Líneas - Ademincol SA"
+	description="Gestión de activos: análisis estructural de líneas, validación corridas ILI, alineación multianual, presiones seguras (ASME B31G/B31.4), corrosión, agrietamiento, abolladuras y vida remanente."
+	canonical="https://ademincol.com.co/servicios/soldadura"
+	heroTitle="Gestión de Activos"
+	heroSub="Análisis estructural de líneas a partir de inspecciones ILI por pérdida de metal, agrietamiento, distorsiones de diámetro y deformaciones por curvado."
+	breadcrumb="Gestión de Activos"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+</ServiceLayout>

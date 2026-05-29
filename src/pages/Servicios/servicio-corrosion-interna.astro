@@ -1,0 +1,78 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/09.Monitoreo y evaluacion de corrosion interna';
+
+const galeria = [
+	{ src: `${IMG_BASE}/corrosion interna 4.jpg`, alt: 'Monitoreo de corrosión interna' },
+	{ src: `${IMG_BASE}/corrosion interna 6.jpg`, alt: 'Evaluación de daño interno en tuberías' },
+	{ src: `${IMG_BASE}/corrosion interna 7.jpg`, alt: 'Análisis de corrosión en activos' },
+];
+
+const capacidades = [
+	{ titulo: 'Análisis Microbiológico en Aguas', detalle: 'Identificación de bacterias sulfato-reductoras y otros microorganismos asociados a la corrosión.' },
+	{ titulo: 'Análisis Fisicoquímicos de Crudos', detalle: 'Caracterización del fluido para diagnóstico de mecanismos de corrosión.' },
+	{ titulo: 'Análisis de Residuos de Raspadores', detalle: 'Evaluación de depósitos retirados durante operaciones de raspado de líneas.' },
+	{ titulo: 'Análisis Cromatográficos', detalle: 'Cromatografía de gases y líquidos para caracterización del fluido.' },
+	{ titulo: 'Análisis de Gases (In-Situ)', detalle: 'Mediciones puntuales en campo para validación de condiciones operativas.' },
+	{ titulo: 'Monitoreo en Residuo de Inhibidor', detalle: 'Verificación de la dosificación efectiva de inhibidor en el sistema.' },
+	{ titulo: 'Instalación y Retiro de Cupones', detalle: 'Servicio operativo en línea para cupones de corrosión.' },
+	{ titulo: 'Evaluación Gravimétrica de Cupones', detalle: 'Cálculo de tasas de corrosión por pérdida de masa, evaluación de incrustaciones.' },
+	{ titulo: 'Evaluación de Biocupones', detalle: 'Cuantificación de biofilm y carga microbiana asociada.' },
+	{ titulo: 'Diagnóstico de Mecanismos de Corrosión Interna', detalle: 'Identificación de los mecanismos activos en el sistema.' },
+	{ titulo: 'Estrategia Química Tailor Made', detalle: 'Diseño y ejecución de estrategias químicas personalizadas para gestión de corrosión, incrustaciones y depósitos.' },
+	{ titulo: 'Inteligencia de Datos y Modelos Predictivos', detalle: 'Analítica avanzada para anticipar tendencias que afecten la productividad.' },
+	{ titulo: 'Hidrogeoquímica — Diagnóstico y Proyección', detalle: 'Evaluación química del agua para comprender procesos en el yacimiento y la operación.' },
+	{ titulo: 'Rehabilitación de Tuberías y Tanques', detalle: 'Soluciones integrales para mitigación y reparación de activos afectados por corrosión interna.' },
+];
+
+const aplicaciones = [
+	{ src: `${IMG_BASE}/WhatsApp Image 2025-05-29 at 2.47.34 PM.jpeg`, alt: 'Inspección interna de equipos' },
+	{ src: `${IMG_BASE}/WhatsApp Image 2025-05-29 at 2.47.38 PM.jpeg`, alt: 'Monitoreo de espesores' },
+	{ src: `${IMG_BASE}/4a4525ca-cfe8-4565-99d6-ee6e7fe378e8.jpg`, alt: 'Análisis de mecanismos de corrosión' },
+];
+---
+<ServiceLayout
+	title="Monitoreo y Evaluación de Corrosión Interna - Ademincol SA"
+	description="Monitoreo de corrosión interna en sistemas de proceso: análisis fisicoquímico, microbiológico, cromatografía, gases in-situ, cupones y biocupones, química e integridad."
+	canonical="https://ademincol.com.co/servicios/corrosion-interna"
+	heroTitle="Monitoreo y Evaluación de Corrosión Interna"
+	heroSub="Servicio especializado para la evaluación de mecanismos de daño por corrosión interna en sistemas de proceso, integrando análisis del fluido, monitoreo y química preventiva."
+	breadcrumb="Corrosión Interna"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+	<section slot="extra" class="service-applications-section">
+		<h2 style="font-family:Barlow,sans-serif;color:#cf2e2e;font-size:26px;font-weight:700;margin:0 0 28px;padding-bottom:12px;border-bottom:2px solid #f0f0f0;">Posibles Aplicaciones</h2>
+		<div class="applications-grid">
+			{aplicaciones.map((a) => (
+				<div class="application-card">
+					<div class="app-image">
+						<img src={a.src} alt={a.alt} loading="lazy" />
+					</div>
+					<div class="app-text-placeholder">
+						<span><i class="fas fa-pen"></i> Insertar texto</span>
+					</div>
+				</div>
+			))}
+		</div>
+	</section>
+</ServiceLayout>

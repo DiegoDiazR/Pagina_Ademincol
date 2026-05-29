@@ -1,0 +1,26 @@
+{
+  "name": "ademincol-site",
+  "version": "1.0.0",
+  "description": "Sitio web de Ademincol SA — generado con Astro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": ">=18.20.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoDiazR/Pagina_Ademincol.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.3.8"
+  }
+}

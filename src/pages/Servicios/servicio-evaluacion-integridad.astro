@@ -1,0 +1,50 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/03.Evaluacion Y Diagnostico del estado de integridad de activos';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Crawler.jpeg`, alt: 'Crawler de inspección interna' },
+	{ src: `${IMG_BASE}/Crawler_2.jpeg`, alt: 'Crawler en tubería de proceso' },
+	{ src: `${IMG_BASE}/Crawler_3.jpeg`, alt: 'Crawler ejecutando levantamiento interno' },
+];
+
+const capacidades = [
+	{ titulo: 'API 653 — Tanques de Almacenamiento', detalle: 'Valoración mecánica y de corrosión de tanques bajo API 650 / API 12C. +157 tanques inspeccionados.' },
+	{ titulo: 'API 510 — Recipientes a Presión', detalle: 'Inspección interna y externa de recipientes diseñados bajo ASME Sección VIII. +330 recipientes inspeccionados.' },
+	{ titulo: 'API 570 — Sistemas de Tubería', detalle: 'Evaluación mecánica y estructural de tubería en servicio. +58 km de planta inspeccionados, 6 teas evaluadas.' },
+	{ titulo: 'Inspección de Válvulas de Proceso', detalle: '+870 válvulas inspeccionadas: detección de fugas internas y verificación de hermeticidad bajo API 570.' },
+	{ titulo: 'Inspección de Válvulas de Seguridad', detalle: '+174 válvulas: verificación de calibración y prueba de pase bajo API 510, 570 y ASME VIII Div 1.' },
+	{ titulo: 'Piernas Muertas (Dead Legs)', detalle: 'Identificación de procesos de corrosión activa en zonas de baja circulación.' },
+];
+
+---
+<ServiceLayout
+	title="Evaluación y Diagnóstico del Estado de Integridad de Activos - Ademincol SA"
+	description="Diagnóstico de integridad de tanques, recipientes a presión y tuberías bajo API 510, 570, 653, Fitness For Service API RP 579/ASME FFS-1 e Inspección Basada en Riesgo API 580/581."
+	canonical="https://ademincol.com.co/servicios/evaluacion-integridad"
+	heroTitle="Evaluación y Diagnóstico de Integridad de Activos"
+	heroSub="Valoración mecánica, estructural y de integridad de tanques, recipientes a presión y sistemas de tubería bajo códigos API y ASME."
+	breadcrumb="Integridad de Activos"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

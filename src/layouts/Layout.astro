@@ -1,0 +1,130 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+	title: string;
+	description?: string;
+	canonical?: string;
+	ogTitle?: string;
+	ogDescription?: string;
+	ogImage?: string;
+	bodyClass?: string;
+}
+
+const SITE = 'https://ademincol.com.co';
+const DEFAULT_DESC = 'AHORRO DE ENERGÍA Y MANTENIMIENTO INDUSTRIAL';
+const DEFAULT_OG_IMAGE = 'https://ademincol.com.co/wp-content/uploads/2024/10/cropped-Sin-titulo-1920-x-1080-px-2-1024x293.png';
+
+const {
+	title,
+	description = DEFAULT_DESC,
+	canonical = new URL(Astro.url.pathname, SITE).toString(),
+	ogTitle = title,
+	ogDescription = description,
+	ogImage = DEFAULT_OG_IMAGE,
+	bodyClass,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+	<link rel="canonical" href={canonical} />
+
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={ogTitle} />
+	<meta property="og:description" content={ogDescription} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:site_name" content="Ademincol" />
+	<meta property="og:image" content={ogImage} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={ogTitle} />
+	<meta name="twitter:description" content={ogDescription} />
+	<meta name="twitter:image" content={ogImage} />
+
+	<link rel="icon" href="/css/media/favicon-32.png" sizes="32x32" />
+	<link rel="icon" href="/css/media/favicon-192.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="/css/media/favicon-180.png" />
+
+	<!-- Performance hints -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+	<!-- Preload critical CSS -->
+	<link rel="preload" href="/css/custom-header.css?v=26" as="style" />
+
+	<!-- Google Fonts: Poppins + Barlow (asíncrona) -->
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Barlow:wght@400;600;700;800&display=swap"
+		media="print"
+		onload="this.media='all'"
+	/>
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Barlow:wght@400;600;700;800&display=swap" />
+	</noscript>
+
+	<!-- Estilos principales -->
+	<link rel="stylesheet" href="/css/custom-header.css?v=26" />
+
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		media="print"
+		onload="this.media='all'"
+	/>
+	<noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	</noscript>
+
+	<slot name="head" />
+</head>
+
+<body class={bodyClass}>
+
+	<Header />
+
+	<slot />
+
+	<Footer />
+
+	<!-- Scripts globales (mismos que tenían los HTMLs actuales) -->
+	<script src="/js/sticky-header.js" is:inline defer></script>
+	<script src="/js/contact-modal.js" is:inline></script>
+	<script src="/js/market-data.js" is:inline></script>
+	<script src="/js/floating-whatsapp.js" is:inline defer></script>
+
+	<!-- Service Worker -->
+	<script is:inline>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/js/sw.js', { scope: '/' }).catch(() => {});
+			});
+		}
+	</script>
+
+	<!-- Footer CTA visibility (IntersectionObserver) -->
+	<script is:inline>
+		(function () {
+			var card = document.getElementById('footer-cta-card');
+			var footer = document.getElementById('site-footer');
+			if (!card || !footer) return;
+			var observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) card.classList.add('footer-cta-visible');
+					else card.classList.remove('footer-cta-visible');
+				});
+			}, { threshold: 0.1 });
+			observer.observe(footer);
+		})();
+	</script>
+</body>
+</html>

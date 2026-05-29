@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout
+	title="Inicio - Ademincol SA"
+	description="AHORRO DE ENERGÍA Y MANTENIMIENTO INDUSTRIAL"
+	canonical="https://ademincol.com.co/"
+>
+	<!-- Prefetch hints específicos de la home -->
+	<link slot="head" rel="prefetch" href="/Servicios/servicios.html" />
+	<link slot="head" rel="prefetch" href="/nuestra-empresa.html" />
+	<link slot="head" rel="prefetch" href="/contactenos.html" />
+
+	<main>
+		<section class="hero-section">
+			<!-- Video Background -->
+			<video autoplay loop muted playsinline class="hero-bg-video" preload="metadata"
+				poster="/css/media/Quienes_somos.jpeg">
+				<source src="/css/media/TRANSICCIÓN-PAGINA 1.mp4" type="video/mp4" />
+			</video>
+
+			<div class="hero-content-wrapper">
+				<!-- Main Title -->
+				<div class="hero-main-title">
+					<h1>Servicios de inspección e integridad, control de calidad y
+						gestión de
+						activos<br /></h1>
+				</div>
+				<br />
+				<br />
+				<!-- Eyebrow -->
+				<div class="hero-eyebrow">
+					<p>...La calidad nace de la experiencia y la innovación...</p>
+				</div>
+				<!-- Buttons Area -->
+				<div class="hero-buttons-wrapper">
+					<a href="/contactenos.html" class="hero-btn-primary">Solicitar Cotización</a>
+				</div>
+			</div>
+		</section>
+		<br /><br />
+
+		<!-- "¿Quiénes somos?" Section -->
+		<section class="about-section">
+			<div class="about-container">
+				<div class="about-image">
+					<img src="/css/media/Quienes_somos.jpeg" alt="Operaciones Ademincol" loading="lazy" width="600"
+						height="400" />
+				</div>
+				<div class="about-content">
+					<h2 class="about-headline">Más que inspección: garantizamos la integridad de sus activos</h2>
+					<div class="about-description">
+						<p>Optimizamos la seguridad, eficiencia y cumplimiento normativo de sus operaciones industriales
+							mediante inspecciones técnicas avanzadas y personal altamente calificado.</p>
+
+						<ul class="about-bullets">
+							<li><i class="fas fa-check-circle"></i> Personal certificado internacionalmente</li>
+							<li><i class="fas fa-check-circle"></i> Tecnología de inspección con drones</li>
+							<li><i class="fas fa-check-circle"></i> Experiencia en múltiples sectores</li>
+							<li><i class="fas fa-check-circle"></i> Cumplimiento API, ASNT y AMPP</li>
+						</ul>
+					</div>
+
+					<!-- Bloque de Métricas de Autoridad -->
+					<div class="about-metrics">
+						<div class="metric-item">
+							<h3>+8 años</h3>
+							<p>Trayectoria</p>
+						</div>
+						<div class="metric-item">
+							<h3>+150</h3>
+							<p>Clientes satisfechos</p>
+						</div>
+						<div class="metric-item">
+							<h3>100%</h3>
+							<p>Cumplimiento Normativo</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Script específico de esta página: forzar autoplay del hero video -->
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', function () {
+			var video = document.querySelector('.hero-bg-video');
+			if (video && video.paused) {
+				video.play().catch(function () {});
+			}
+		});
+	</script>
+</Layout>

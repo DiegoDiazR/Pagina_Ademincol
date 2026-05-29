@@ -1,0 +1,32 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const capacidades = [
+	{ titulo: 'Bases de Datos SQL / NoSQL', detalle: 'Bases estructuradas para centralizar y organizar la información generada en procesos de inspección y gestión de activos.' },
+	{ titulo: 'Análisis y Visualización en R / Python', detalle: 'Herramientas para integración con bases de datos, procesamiento de información y desarrollo de interfaces gráficas.' },
+	{ titulo: 'Matriz de Riesgo Configurable', detalle: 'Visualización y clasificación del impacto potencial en la operación (COF × POF).' },
+	{ titulo: 'Distribución de Riesgo', detalle: 'Identifica concentraciones y tendencias en los datos de riesgo analizados.' },
+	{ titulo: 'Gráficas de Proyección', detalle: 'Proyección de DF y riesgo para diferentes targets, incluyendo cálculo de la edad de la próxima inspección.' },
+	{ titulo: 'Integración con Sistemas Existentes', detalle: 'Conexión con plataformas de gestión, ERP y sistemas SCADA del cliente.' },
+	{ titulo: 'Dashboards y Reportes Automatizados', detalle: 'Generación automática de informes técnicos y dashboards ejecutivos.' },
+	{ titulo: 'Migración desde Word / Excel / PDF', detalle: 'Centralización de información técnica almacenada en archivos dispersos.' },
+];
+---
+<ServiceLayout
+	title="Desarrollo de Software a la Medida - Ademincol SA"
+	description="Soluciones de software a la medida para gestión de inspección y activos: bases de datos SQL/NoSQL, análisis y visualización en R/Python, herramientas de análisis de riesgo."
+	canonical="https://ademincol.com.co/servicios/mantenimiento-predictivo"
+	heroTitle="Desarrollo de Software a la Medida"
+	heroSub="Soluciones de software diseñadas a la medida del cliente para centralizar, analizar y visualizar la información técnica de los procesos de inspección y gestión de activos."
+	breadcrumb="Software a la Medida"
+>
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+</ServiceLayout>

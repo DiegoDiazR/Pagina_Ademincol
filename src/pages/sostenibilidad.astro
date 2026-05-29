@@ -1,0 +1,475 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout
+	title="Sostenibilidad - Ademincol SA"
+	description="Compromiso ambiental y sostenibilidad de Ademincol S.A. — gestión de residuos, ODS, programas sociales y certificaciones."
+	canonical="https://ademincol.com.co/sostenibilidad.html"
+>
+	<main>
+		<Hero
+			variant="light"
+			eyebrow="Sostenibilidad"
+			title="Sostenibilidad e<br />Impacto Ambiental"
+			subtitle="Maximizamos la integridad y eficiencia de la infraestructura industrial bajo estrictos estándares internacionales de gestión ambiental, seguridad y compromiso con los Objetivos de Desarrollo Sostenible."
+		>
+			<div slot="right" class="sost-hero-right">
+				<div class="sost-hero-image-card">
+					<img src="/css/media/Hero_paneles_solares.jpeg" alt="Paneles solares y termografía con dron" loading="eager" />
+				</div>
+				<div class="sost-hero-badges">
+					<span class="sost-hero-badge">
+						<i class="fas fa-certificate"></i>
+						ISO 14001 / 45001 Certificados
+					</span>
+					<span class="sost-hero-badge">
+						<i class="fas fa-globe-americas"></i>
+						Agenda 2030 ODS
+					</span>
+				</div>
+			</div>
+		</Hero>
+
+		<!-- SECCIÓN 1 — ODS -->
+		<section class="sost-section">
+			<div class="sost-container">
+				<h2 class="sost-section-title">Objetivos de Desarrollo <span class="accent">Sostenible</span></h2>
+				<p class="sost-section-subtitle">Alineamos nuestras operaciones con la Agenda 2030 de las Naciones Unidas, aplicando específicamente los siguientes ODS:</p>
+
+				<div class="ods-grid">
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-03.png" alt="ODS 3" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 3 · Salud y Bienestar</span>
+							<h3>Seguridad y salud laboral</h3>
+							<p>Priorizamos la salud física y mental de nuestro equipo humano, garantizando entornos de trabajo seguros y programas de bienestar que trascienden el cumplimiento legal.</p>
+						</div>
+					</div>
+
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-06.png" alt="ODS 6" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 6 · Agua limpia y saneamiento</span>
+							<h3>Protección de recursos hídricos</h3>
+							<p>Realizamos el seguimiento permanente de los consumos de agua y se establecen metas diarias de consumo, contribuyendo al uso eficiente y responsable del recurso hídrico; promoviendo la gestión sostenible del agua y la conciencia ambiental dentro de la organización.</p>
+						</div>
+					</div>
+
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-07.png" alt="ODS 7" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 7 · Energía asequible y no contaminante</span>
+							<h3>Eficiencia y soporte energético</h3>
+							<p>En Ademincol, hemos logrado optimizar nuestros procesos internos, manteniendo un consumo energético consistentemente por debajo del límite diario establecido.</p>
+						</div>
+					</div>
+
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-08.png" alt="ODS 8" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 8 · Trabajo decente y crecimiento económico</span>
+							<h3>Desarrollo profesional y ético</h3>
+							<p>Fomentamos el crecimiento económico sostenible a través de la formalidad laboral, la capacitación continua y la generación de empleo de calidad en el sector de servicios industriales.</p>
+						</div>
+					</div>
+
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-12.png" alt="ODS 12" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 12 · Producción y Consumo Responsables</span>
+							<h3>Gestión de residuos industriales</h3>
+							<p>Hemos implementado un Plan de Gestión Integral de Residuos Sólidos (PGIRS) que trasciende la disposición convencional. No solo aseguramos el tratamiento responsable de materiales peligrosos y residuos ordinarios, sino que impulsamos un modelo de economía circular mediante el aprovechamiento de residuos.</p>
+						</div>
+					</div>
+
+					<div class="ods-card">
+						<div class="ods-icon-wrap">
+							<img src="https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2019/09/S-WEB-Goal-13.png" alt="ODS 13" width="72" height="72" />
+						</div>
+						<div class="ods-card-body">
+							<span class="ods-num">ODS 13 · Acción por el Clima</span>
+							<h3>Estrategia de descarbonización</h3>
+							<p>Realizamos la medición y seguimiento de las emisiones de gases de efecto invernadero en los alcances 1, 2 y 3, promovemos la cuantificación, control y reducción de la huella de carbono para facilitar la toma de decisiones orientadas a la mitigación del cambio climático y al desarrollo de operaciones más sostenibles.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECCIÓN 3 — INFOGRAFÍA RESIDUOS -->
+		<section class="sost-section bg-verde">
+			<div class="sost-container">
+				<h2 class="sost-section-title">Manejo de <span class="accent">Residuos</span></h2>
+				<p class="sost-section-subtitle">Nuestro Plan de Gestión Integral de Residuos define el ciclo completo desde la generación hasta la disposición final responsable.</p>
+
+				<div class="infografia-wrap">
+					<img
+						src="/css/media/ODS.png"
+						alt="Diagrama de flujo manejo de residuos Ademincol"
+						style="max-width:900px;width:100%;display:block;margin:0 auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1)"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECCIÓN 4 — PROGRAMAS SOCIALES -->
+		<section class="sost-section">
+			<div class="sost-container">
+				<h2 class="sost-section-title">Campañas de <span class="accent">Sostenibilidad</span></h2>
+				<div class="programas-grid">
+					<div class="programas-texto">
+						<p>
+							Desarrollamos campañas de gestión integral de residuos orientadas al aprovechamiento de materiales, la disposición adecuada de residuos posconsumo y la promoción de la economía circular. Estas iniciativas fortalecen la cultura ambiental, contribuyen a la reducción de la contaminación y fomentan la responsabilidad social y ambiental, generando impactos positivos tanto para la comunidad como para el medio ambiente, en alineación con los principios de sostenibilidad y los Objetivos de Desarrollo Sostenible.
+						</p>
+					</div>
+
+					<div class="fotos-grid">
+						<article class="campana-card">
+							<img src="/css/media/sostenibilidad/Botellas.png" alt="Campaña de recolección de botellas" loading="lazy" />
+							<div class="campana-card-body">
+								<h3>Botellas de amor</h3>
+								<p>Campaña enfocada en el aprovechamiento de residuos plásticos mediante su reincorporación a procesos productivos, generando además un impacto social positivo al apoyar tratamientos de niños con cáncer, promoviendo la responsabilidad social y la economía circular.</p>
+							</div>
+						</article>
+
+						<article class="campana-card">
+							<img src="/css/media/sostenibilidad/Pilas.png" alt="Campaña de recolección de pilas" loading="lazy" />
+							<div class="campana-card-body">
+								<h3>Pilas con el ambiente</h3>
+								<p>Iniciativa orientada a la gestión adecuada de residuos plásticos y no aprovechables, fomentando la economía circular mediante su transformación en madera plástica para la fabricación de mobiliario urbano y contribuyendo a la reducción de residuos enviados a disposición final.</p>
+							</div>
+						</article>
+
+						<article class="campana-card">
+							<img src="/css/media/sostenibilidad/Tapas.png" alt="Campaña de recolección de tapas" loading="lazy" />
+							<div class="campana-card-body">
+								<h3>Tapas para sanar</h3>
+								<p>Campaña enfocada en la disposición adecuada de pilas y acumuladores, previniendo la contaminación del suelo y el agua por sustancias peligrosas, y promoviendo una cultura de responsabilidad ambiental y manejo sostenible de residuos posconsumo.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECCIÓN 6 — CERTIFICACIONES -->
+		<section class="sost-section bg-verde">
+			<div class="sost-container">
+				<h2 class="sost-section-title" style="text-align:center">Certificaciones <span class="accent">Vigentes</span></h2>
+				<p class="sost-section-subtitle" style="text-align:center;margin-left:auto;margin-right:auto">Nuestros sistemas de gestión están certificados bajo estándares internacionales.</p>
+
+				<div class="certs-row">
+					<div class="cert-card">
+						<div class="cert-logo-wrap">
+							<img src="/css/media/certs/iso-14001.png" alt="Sello ICONTEC ISO 14001 — Gestión Ambiental" loading="lazy" style="width:90px;height:90px;object-fit:contain" />
+						</div>
+						<h4>ISO 14001</h4>
+						<p>Gestión Ambiental</p>
+					</div>
+
+					<div class="cert-card">
+						<div class="cert-logo-wrap">
+							<img src="/css/media/certs/iso-9001.png" alt="Sello ICONTEC ISO 9001 — Gestión de Calidad" loading="lazy" style="width:90px;height:90px;object-fit:contain" />
+						</div>
+						<h4>ISO 9001</h4>
+						<p>Gestión de Calidad</p>
+					</div>
+
+					<div class="cert-card">
+						<div class="cert-logo-wrap">
+							<img src="/css/media/certs/iso-45001.png" alt="Sello ICONTEC ISO 45001 — Seguridad y Salud en el Trabajo" loading="lazy" style="width:90px;height:90px;object-fit:contain" />
+						</div>
+						<h4>ISO 45001</h4>
+						<p>Seguridad y Salud en el Trabajo</p>
+					</div>
+
+					<div class="cert-card">
+						<div class="cert-logo-wrap">
+							<img src="/css/media/Logo_RUC.png" alt="Sello RUC — Registro Único de Contratistas" loading="lazy" style="width:100px;height: 110px;object-fit:contain" />
+						</div>
+						<h4>RUC</h4>
+						<p>Registro Único de Contratistas</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style is:global>
+	/* ── Variables de página ── */
+	:root {
+		--verde-oscuro: #36592f;
+		--verde-medio: #4A7940;
+		--verde-claro: #f1f5f0;
+		--gris-seccion: #f7f7f7;
+		--texto: #1a1a1a;
+		--texto-suave: #555;
+		--rojo-marca: #cf2e2e;
+	}
+
+	/* ── Hero — Asymmetric Split Layout ──
+	   Contenido del slot derecho del Hero — imagen card + badges institucionales */
+	.sost-hero-right {
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+	}
+	/* Fila de etiquetas institucionales debajo de la foto.
+	   Anclan visualmente el card cinematográfico y aprovechan el espacio
+	   vertical que su forma horizontal deja libre. */
+	.sost-hero-badges {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 12px;
+	}
+	.sost-hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		padding: 10px 16px;
+		background: #ffffff;
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		border-radius: 999px;
+		font-size: 12px;
+		font-weight: 600;
+		color: #1a1a1a;
+		white-space: nowrap;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+		letter-spacing: 0.3px;
+	}
+	.sost-hero-badge i {
+		color: #4A7940;
+		font-size: 13px;
+	}
+	.sost-hero-image-card {
+		width: 100%;
+		/* Aspect exacto de la imagen (1600x638) → encaja borde a borde sin barras */
+		aspect-ratio: 1600 / 638;
+		border-radius: 16px;
+		overflow: hidden;
+		background: #000000;
+		/* Sombra multicapa premium (misma fórmula que la galería de servicios) */
+		box-shadow:
+			0 2px 4px rgba(0, 0, 0, 0.04),
+			0 25px 60px rgba(0, 0, 0, 0.08);
+		transition: transform .4s cubic-bezier(0.22, 1, 0.36, 1),
+		            box-shadow .4s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.sost-hero-image-card:hover {
+		transform: translateY(-6px);
+		box-shadow:
+			0 4px 8px rgba(0, 0, 0, 0.04),
+			0 35px 80px rgba(0, 0, 0, 0.12);
+	}
+	.sost-hero-image-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	/* ── Layout general ── */
+	.sost-section { padding: 72px 20px; }
+	.sost-section.bg-gris { background: var(--gris-seccion); }
+	.sost-section.bg-verde { background: var(--verde-claro); }
+	.sost-container { max-width: 1100px; margin: 0 auto; }
+	.sost-section-title {
+		font-family: 'Barlow', sans-serif;
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 700;
+		color: var(--verde-oscuro);
+		margin: 0 0 8px;
+	}
+	.sost-section-subtitle {
+		color: var(--texto-suave);
+		font-size: 0.95rem;
+		margin: 0 0 40px;
+		max-width: 620px;
+	}
+	.sost-section-title .accent { color: var(--rojo-marca); }
+
+	/* ── ODS ── */
+	.ods-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-auto-rows: 1fr;
+		gap: 24px;
+		align-items: stretch;
+	}
+	.ods-card {
+		background: #fff;
+		border-radius: 12px;
+		padding: 28px 24px;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: flex-start;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+		border: 1px solid rgba(0,0,0,0.03);
+	}
+	.ods-card .ods-icon-wrap { align-self: center; }
+	.ods-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+	}
+	.ods-icon-wrap {
+		flex-shrink: 0;
+		width: 72px;
+		height: 72px;
+		border-radius: 10px;
+		overflow: hidden;
+		background: #f5f5f5;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	}
+	.ods-icon-wrap img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		display: block;
+	}
+	.ods-card-body h3 {
+		font-family: 'Barlow', sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--verde-oscuro);
+		margin: 0 0 6px;
+	}
+	.ods-card-body .ods-num {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--rojo-marca);
+		margin-bottom: 8px;
+		display: block;
+	}
+	.ods-card-body p {
+		font-size: 0.88rem;
+		color: var(--texto-suave);
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	/* ── Infografía Residuos ── */
+	.infografia-wrap { text-align: center; }
+	.infografia-wrap img {
+		max-width: 100%;
+		border-radius: 10px;
+		box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+	}
+
+	/* ── Programas Sociales ── */
+	.programas-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 32px;
+		align-items: start;
+	}
+	.fotos-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+	.campana-card {
+		background: #fff;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	.campana-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+	}
+	.campana-card img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		height: auto;
+		object-fit: contain;
+		background: #f5f5f5;
+		display: block;
+	}
+	.campana-card-body { padding: 18px 20px 22px; }
+	.campana-card-body h3 {
+		font-family: 'Barlow', sans-serif;
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--verde-oscuro);
+		margin: 0 0 8px;
+	}
+	.campana-card-body p {
+		font-size: 0.85rem;
+		color: var(--texto-suave);
+		line-height: 1.55;
+		margin: 0;
+	}
+	@media (max-width: 700px) {
+		.fotos-grid { grid-template-columns: 1fr; }
+	}
+	.programas-texto p {
+		font-size: 0.9rem;
+		color: var(--texto-suave);
+		line-height: 1.7;
+		margin: 0 0 12px;
+	}
+
+	/* ── Certificaciones ── */
+	.certs-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		justify-content: center;
+		align-items: center;
+	}
+	.cert-card {
+		background: #fff;
+		border-radius: 10px;
+		padding: 24px 20px;
+		box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		width: 160px;
+		text-align: center;
+	}
+	.cert-logo-wrap { width: 90px; height: 90px; }
+	.cert-card h4 {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--verde-oscuro);
+		margin: 0;
+	}
+	.cert-card p {
+		font-size: 0.75rem;
+		color: var(--texto-suave);
+		margin: 0;
+	}
+
+	/* ── Responsive general ── */
+	@media (max-width: 768px) {
+		.sost-hero-image-card {
+			max-width: 560px;
+			margin: 0 auto;
+		}
+		.sost-hero-badge {
+			font-size: 11px;
+			padding: 8px 13px;
+		}
+	}
+</style>

@@ -1,0 +1,74 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/07.Aseguramiento de calidad para procesos de soldadura';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Soldadura.JPG`, alt: 'Control de calidad en proceso de soldadura' },
+	{ src: `${IMG_BASE}/Soldadura_2.JPG`, alt: 'Inspección de junta soldada en obra' },
+	{ src: `${IMG_BASE}/Soldadura_3.JPG`, alt: 'Supervisión de soldadura bajo normas AWS / ASME' },
+];
+
+const soldadura = [
+	{ titulo: 'Supervisión Montaje de Tuberías y Equipos', detalle: 'Mecánica: control durante la fabricación y el montaje, recepción de materiales y pruebas.' },
+	{ titulo: 'Control de Soldadura — WPS, PQR, WPQ', detalle: 'Calificación de procedimientos y soldadores bajo AWS, ASME y ACOSEND.' },
+	{ titulo: 'END en Obra — UT, RT, MT, PT', detalle: 'Inspección de soldaduras y componentes durante la fabricación y el montaje.' },
+	{ titulo: 'Pruebas Hidrostáticas y Neumáticas', detalle: 'Pruebas de presión y hermeticidad en tuberías y recipientes.' },
+];
+
+const interventoria = [
+	{ titulo: 'Control de Obras Civiles y Fundaciones', detalle: 'Civil: supervisión de fundaciones, estructuras y obras de soporte.' },
+	{ titulo: 'Ensayos de Concreto (ASTM)', detalle: 'Resistencia, esclerometría, núcleos y caracterización de concreto.' },
+	{ titulo: 'Control Topográfico', detalle: 'Verificación geométrica y de niveles durante la construcción.' },
+	{ titulo: 'Verificación de Estructuras y Soportes', detalle: 'Inspección de estructuras metálicas y soportes de tubería y equipos.' },
+	{ titulo: 'Calibración de Instrumentos', detalle: 'Instrumentación: montaje y calibración de instrumentos de proceso.' },
+	{ titulo: 'Loop Check y Pruebas Funcionales', detalle: 'Verificación punto a punto de lazos de control e instrumentación.' },
+	{ titulo: 'FAT / SAT', detalle: 'Factory Acceptance Test y Site Acceptance Test para sistemas y equipos.' },
+	{ titulo: 'Integración PLC / SCADA', detalle: 'Validación de sistemas de control y seguridad.' },
+	{ titulo: 'Supervisión de Redes MT/BT', detalle: 'Eléctrica: control de redes de media y baja tensión.' },
+	{ titulo: 'Control de Bandejas y Cableado', detalle: 'Supervisión del montaje eléctrico industrial.' },
+	{ titulo: 'Pruebas de Aislamiento y Continuidad', detalle: 'Pruebas eléctricas de cables y equipos.' },
+	{ titulo: 'Sistemas de Puesta a Tierra', detalle: 'Cumplimiento RETIE / IEC en sistemas de tierra.' },
+	{ titulo: 'Pre-comisionamiento y Comisionamiento', detalle: 'Verificación pre-arranque y soporte durante la puesta en servicio.' },
+];
+
+---
+<ServiceLayout
+	title="Aseguramiento de Calidad para Procesos de Soldadura (QAQC) - Ademincol SA"
+	description="Aseguramiento y control de calidad QA/QC de obras: supervisión mecánica, civil, eléctrica e instrumentación bajo normas AWS, ASME, ASTM y RETIE."
+	canonical="https://ademincol.com.co/servicios/corrosion-externa"
+	heroTitle="Aseguramiento de Calidad — Soldadura (QAQC)"
+	heroSub="Control de calidad integral en obras mecánicas, civiles, eléctricas y de instrumentación, asegurando el cumplimiento normativo del proyecto."
+	breadcrumb="QAQC Soldadura"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Soldadura</h2>
+	<div class="service-capabilities-grid">
+		{soldadura.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+	<h2>Interventoría</h2>
+	<div class="service-capabilities-grid">
+		{interventoria.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

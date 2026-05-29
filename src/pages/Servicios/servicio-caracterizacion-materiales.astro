@@ -1,0 +1,51 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/02.Analisis de laboratorios AFAs y caracterizacion de materiales';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Composición_quimica.jpg`, alt: 'Análisis de composición química' },
+	{ src: `${IMG_BASE}/Microestructura.jpeg`, alt: 'Microestructura de aleaciones metálicas' },
+];
+
+const capacidades = [
+	{ titulo: 'Análisis Estructural y Físico', detalle: 'Microscopía óptica para análisis metalográfico, identificación de microestructura y mecanismos de degradación.' },
+	{ titulo: 'Medición de Durezas', detalle: 'Evaluación de propiedades mecánicas mediante ensayos de dureza Brinell, Rockwell, Vickers y portátil.' },
+	{ titulo: 'Composición Química — XRF', detalle: 'Fluorescencia de Rayos X: identificación cuantitativa de elementos en aleaciones metálicas.' },
+	{ titulo: 'Composición Química — OES', detalle: 'Espectrometría de Emisión Óptica: análisis cuantitativo de aleaciones, incluyendo elementos ligeros como C, S, P.' },
+	{ titulo: 'Composición Química — LIBS', detalle: 'Espectrometría de Plasma Inducido por Láser: identificación rápida y portátil de aleaciones.' },
+	{ titulo: 'Análisis de Fallas (AFAs)', detalle: 'Investigación de la causa raíz de fallas mediante combinación de inspección visual, metalografía, química y mecánica.' },
+	{ titulo: 'Pruebas Destructivas', detalle: 'Ensayos de tracción, doblado, impacto y dureza para calificación de materiales y procedimientos.' },
+	{ titulo: 'Prueba de Sanidad', detalle: 'Evaluación macroscópica de la calidad interna de soldaduras y materiales base.' },
+];
+
+---
+<ServiceLayout
+	title="Análisis de Laboratorios AFAs y Caracterización de Materiales - Ademincol SA"
+	description="Análisis de laboratorios AFAs (Análisis de Fallas Ad Hoc) y caracterización in situ de materiales: estructural, mecánico y químico mediante XRF, OES y LIBS."
+	canonical="https://ademincol.com.co/servicios/caracterizacion-materiales"
+	heroTitle="AFAs y Caracterización de Materiales"
+	heroSub="Análisis de falla (AFAs) y caracterización de materiales in situ para identificación, validación de propiedades mecanicas de materiales."
+	breadcrumb="AFAs y Caracterización"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

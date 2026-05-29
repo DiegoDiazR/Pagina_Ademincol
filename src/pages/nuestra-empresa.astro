@@ -1,0 +1,259 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+<Layout
+	title="Nuestra Empresa - Ademincol SA"
+	description="Contamos con equipos propios y de última generación. Más de 40 años de trayectoria en inspección e integridad industrial."
+	canonical="https://ademincol.com.co/nuestra-empresa.html"
+	ogDescription="Contamos con equipos propios y de última generación."
+>
+	<!-- Estilos específicos de esta página -->
+	<link slot="head" rel="stylesheet" href="/css/nuestra-empresa.css" />
+
+	<main class="about-page-content">
+		<Hero
+			variant="dark"
+			eyebrow="Trayectoria · Calidad · Innovación"
+			title="Liderazgo Global en<br>Integridad Industrial"
+			subtitle="Transformamos experiencia técnica en soluciones confiables desde hace más de 8 años."
+			bgImage="/css/media/industrial-drone-survey.jpg"
+		/>
+
+		<!--Seccion de números de marca-->
+		<section class="brand-strip">
+			<div class="brand-strip-inner">
+				<div class="brand-strip-item">
+					<strong>+xx</strong>
+					<span>Inspecciones Exitosas</span>
+				</div>
+				<div class="brand-strip-divider"></div>
+				<div class="brand-strip-item">
+					<strong>+xx</strong>
+					<span>Equipos de alta tecnologia</span>
+				</div>
+				<div class="brand-strip-divider"></div>
+				<div class="brand-strip-item">
+					<strong>+150</strong>
+					<span>Proyectos ejecutados</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+		     QUIÉNES SOMOS
+		════════════════════════════════════════ -->
+		<section class="about-section">
+			<div class="about-container">
+				<div class="about-image">
+					<img src="/css/media/puente_ductos.jpeg" alt="Inspección Ademincol" loading="lazy" />
+				</div>
+				<div class="about-content">
+					<h2 class="about-headline">Excelencia Técnica al Servicio de la Industria</h2>
+					<div class="about-description">
+						<p>Ademincol S.A. es una organización líder en la prestación de servicios especializados de inspección, ensayos no destructivos (END), control de calidad y gestión de integridad de activos.</p>
+						<p>Nuestra historia se fundamenta en la capacidad de adaptar tecnologías de vanguardia a los retos más exigentes de la industria global, garantizando siempre la máxima seguridad y continuidad operativa.</p>
+						<ul class="about-bullets"></ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+		     MISIÓN Y FILOSOFÍA
+		════════════════════════════════════════ -->
+		<section class="mission-vision-section">
+			<div class="container">
+				<div class="mission-grid">
+					<div class="mission-card">
+						<div class="icon-box"><i class="fas fa-bullseye"></i></div>
+						<h3>Nuestra Misión</h3>
+						<p>Ofrecer servicios especializados de inspección y gestión de activos que contribuyan a la seguridad y optimización de los procesos industriales, superando las expectativas del cliente mediante la excelencia técnica.</p>
+					</div>
+					<div class="mission-card">
+						<div class="icon-box"><i class="fas fa-binoculars"></i></div>
+						<h3>Nuestra Visión</h3>
+						<p>Ser la empresa líder en la prestación de servicios de mantenimiento predictivo-proactivo e inspecciones de ensayos no destructivos en el mercado regional y global, con proyecciones de crecimiento sostenido, garantizando la total satisfacción de nuestros clientes.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+		     VALORES Y OBJETIVOS
+		════════════════════════════════════════ -->
+		<section class="values-section">
+			<div class="container">
+				<div class="about-header">
+					<span class="eyebrow" style="font-size: 140%;">Fundamentos de Excelencia Técnica</span>
+					<h2>Objetivos <span>Estratégicos</span></h2>
+				</div>
+				<div class="values-grid">
+					<div class="value-item">
+						<div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+						<div class="value-item-content">
+							<h4>Confiabilidad</h4>
+							<p>Garantizar la eficiencia y continuidad operativa de las instalaciones industriales.</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon"><i class="fas fa-microchip"></i></div>
+						<div class="value-item-content">
+							<h4>Innovación</h4>
+							<p>Implementar tecnologías de última generación como drones y escaneo 3D.</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon"><i class="fas fa-users-cog"></i></div>
+						<div class="value-item-content">
+							<h4>Seguridad</h4>
+							<p>Mantener un compromiso firme con la seguridad industrial en cada intervención.</p>
+						</div>
+					</div>
+					<div class="value-item">
+						<div class="value-icon"><i class="fas fa-chart-line"></i></div>
+						<div class="value-item-content">
+							<h4>Valor Real</h4>
+							<p>Proporcionar soluciones que aporten beneficios tangibles a la cadena productiva.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ══════════════════════════════════════
+		     PRESENCIA INTERNACIONAL
+		════════════════════════════════════════ -->
+		<section class="presence-section">
+			<div class="presence-bg-overlay"></div>
+			<div class="container">
+				<div class="presence-header">
+					<h2 class="presence-tagline"><span class="accent">HACEMOS PARTE DEL GRUPO ADEMINSA</span></h2>
+					<p class="presence-subtitle">Más de cuatro décadas fortaleciendo la confiabilidad operativa de la industria en Latinoamérica, Europa y Medio Oriente.</p>
+					<h2 class="presence-main">Operamos en <span class="accent">17 países</span></h2>
+				</div>
+
+				<div class="presence-stats">
+					<div class="stat-card">
+						<span class="stat-num">+1200</span>
+						<span class="stat-label">Especialistas en Latinoamérica</span>
+					</div>
+					<div class="stat-divider" aria-hidden="true"></div>
+					<div class="stat-card">
+						<span class="stat-num">+150</span>
+						<span class="stat-label">Clientes activos</span>
+					</div>
+					<div class="stat-divider" aria-hidden="true"></div>
+					<div class="stat-card">
+						<span class="stat-num">+40</span>
+						<span class="stat-label">Años de experiencia</span>
+					</div>
+				</div>
+
+				<div class="presence-map-wrapper">
+					<div class="presence-map">
+						<img src="/css/media/BlankMap-World.svg.png" alt="Mapa del mundo — presencia internacional Ademincol" class="presence-map-img" loading="lazy" />
+						<button type="button" class="map-marker is-home" style="left:27%;top:48%" data-country="Colombia · Sede Principal" aria-label="Colombia (Sede)">
+							<span class="map-tooltip">
+								<span class="tt-country">Colombia · Sede Principal</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Calle 163 No 16A-63, Las Orquídeas, Bogotá, Colombia</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>comercial1@ademincol.com.co</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:22%;top:40%" data-country="México" aria-label="México">
+							<span class="map-tooltip">
+								<span class="tt-country">México</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Av. Las Américas N° 833, PB, Guadalajara, Jalisco</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>rescobar@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:23%;top:27%" data-country="Estados Unidos" aria-label="Estados Unidos">
+							<span class="map-tooltip">
+								<span class="tt-country">USA / Puerto Rico</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Calle Senda del Parador E-18, Urb. Quinta del Río, Bayamón PR 00961</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>agreyna@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:34%;top:57%" data-country="Brasil" aria-label="Brasil">
+							<span class="map-tooltip">
+								<span class="tt-country">Brasil</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Araucaria, PR, Brasil</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>gandrade@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:27%;top:57%" data-country="Perú" aria-label="Perú">
+							<span class="map-tooltip">
+								<span class="tt-country">Perú · Main Office</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Calle Cerro Azul N°479, Urb. San Ignacio de Monterrico, Surco, Lima 33</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>ademinsa@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:29.5%;top:60%" data-country="Bolivia" aria-label="Bolivia">
+							<span class="map-tooltip">
+								<span class="tt-country">Bolivia · Ademinbol</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Calle Sin Nombre N 11, Barrio Berea, UV 138 Mz 017, entre 7° y 8° anillo</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>infobolivia@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:30%;top:72%" data-country="Argentina" aria-label="Argentina">
+							<span class="map-tooltip">
+								<span class="tt-country">Argentina</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Huamaní 2415, Dpto. 2, Ciudad Autónoma de Buenos Aires (CP 1440)</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>nrluque@gmail.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:45%;top:25%" data-country="Portugal" aria-label="Portugal"><span class="map-tooltip"><span class="tt-country">Portugal</span></span></button>
+						<button type="button" class="map-marker" style="left:62%;top:35%" data-country="Emiratos Árabes Unidos" aria-label="Emiratos Árabes Unidos">
+							<span class="map-tooltip">
+								<span class="tt-country">Emiratos Árabes</span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>scueva@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:24%;top:44%" data-country="Costa Rica" aria-label="Costa Rica">
+							<span class="map-tooltip">
+								<span class="tt-country">Costa Rica</span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>ggangeri@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:29%;top:46%" data-country="Venezuela" aria-label="Venezuela">
+							<span class="map-tooltip">
+								<span class="tt-country">Venezuela</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Av. Francisco de Loreto, CC Loreto, Nivel Mezzanina, Local 2-A, La Victoria, Aragua</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>mijres@ademinsa-venezuela.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:28.5%;top:69%" data-country="Chile" aria-label="Chile">
+							<span class="map-tooltip">
+								<span class="tt-country">Chile</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Carrizal Bajo 9645, Villa Las Palmas, Antofagasta</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>ggangeri@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:25%;top:52%" data-country="Ecuador" aria-label="Ecuador">
+							<span class="map-tooltip">
+								<span class="tt-country">Ecuador</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Alborada 8va Etapa, Solar 7, Manzana 822, Guayaquil</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>wgoycochea@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:23.5%;top:41%" data-country="Guatemala" aria-label="Guatemala"><span class="map-tooltip"><span class="tt-country">Guatemala</span></span></button>
+						<button type="button" class="map-marker" style="left:31.5%;top:65%" data-country="Paraguay" aria-label="Paraguay">
+							<span class="map-tooltip">
+								<span class="tt-country">Paraguay</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Calle Pablo Neruda, casi Ruta Internacional No. 7, Ciudad del Este</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>ecambra@ademinsa.com</span></span>
+							</span>
+						</button>
+						<button type="button" class="map-marker" style="left:32.5%;top:70%" data-country="Uruguay" aria-label="Uruguay">
+							<span class="map-tooltip">
+								<span class="tt-country">Uruguay</span>
+								<span class="tt-row"><i class="fas fa-map-marker-alt"></i><span>Pedro Bustamante 1836, 11600 Montevideo</span></span>
+								<span class="tt-row"><i class="fas fa-envelope"></i><span>mmattos@grupoamg.uy</span></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

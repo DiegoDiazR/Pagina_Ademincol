@@ -1,0 +1,72 @@
+---
+const year = new Date().getFullYear();
+const correos = {
+	pqrsf: 'pqrsf@ademincol.com.co',
+	comercial: 'comercial1@ademincol.com.co',
+};
+---
+<footer id="site-footer">
+
+	<div class="footer-cta-wrapper">
+		<div class="footer-cta-card" id="footer-cta-card">
+			<div class="footer-cta-text">
+				<h3>¿Listo para su próximo proyecto?</h3>
+				<p>Hablemos, estamos disponibles para atenderle.</p>
+			</div>
+			<a href="#" onclick="openContactModal(); return false;" class="footer-cta-btn">Contáctenos</a>
+		</div>
+	</div>
+
+	<div class="footer-body">
+		<div class="footer-inner">
+
+			<div class="footer-col footer-brand">
+				<div class="footer-logo">
+					<img src="/css/media/logo-ademincol.png" alt="Ademincol" loading="lazy" width="160" height="46">
+				</div>
+				<p class="footer-tagline">Inspección · Integridad · Innovación</p>
+				<p class="footer-copy">© {year} Ademincol S.A.<br>Bogotá – Colombia</p>
+			</div>
+
+			<div class="footer-col">
+				<h4 class="footer-col-title">Navegación</h4>
+				<ul class="footer-links">
+					<li><a href="/index.html">Inicio</a></li>
+					<li><a href="/nuestra-empresa.html">Nuestra Empresa</a></li>
+					<li><a href="/Servicios/servicios.html">Servicios</a></li>
+					<li><a href="/contactenos.html">PQRSF / Contacto</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-col">
+				<h4 class="footer-col-title">Contacto</h4>
+				<ul class="footer-links">
+					<li><i class="fas fa-map-marker-alt"></i> Calle 163 #16A-63, Toberín, Bogotá</li>
+					<li><i class="fas fa-phone-alt"></i> +601 7943489</li>
+					<li><i class="fas fa-mobile-alt"></i> +57 311 485 0295</li>
+					<li><i class="fas fa-envelope"></i> {correos.comercial}</li>
+				</ul>
+			</div>
+
+			<div class="footer-col">
+				<h4 class="footer-col-title">Síguenos</h4>
+				<div class="footer-social">
+					<a href="https://www.linkedin.com/company/ademincol-sa/" target="_blank" rel="noopener" aria-label="LinkedIn">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a href="https://www.facebook.com/ademincol2017" target="_blank" rel="noopener" aria-label="Facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="https://api.whatsapp.com/send?phone=573114850295" target="_blank" rel="noopener" aria-label="WhatsApp">
+						<i class="fab fa-whatsapp"></i>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="footer-bottom">
+			<p>Ademincol S.A. © {year} · Todos los derechos reservados</p>
+		</div>
+	</div>
+</footer>

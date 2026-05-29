@@ -1,0 +1,68 @@
+---
+const servicios = [
+	{ slug: 'servicio-tecnicas-inspeccion-end', num: '01', label: 'Técnicas de Inspección — END' },
+	{ slug: 'servicio-caracterizacion-materiales', num: '02', label: 'AFAs y Caracterización de Materiales' },
+	{ slug: 'servicio-evaluacion-integridad', num: '03', label: 'Evaluación y Diagnóstico de Integridad de Activos' },
+	{ slug: 'servicio-ffs-simulacion', num: '04', label: 'FFS — Simulación por Elementos Finitos' },
+	{ slug: 'servicio-gestion-activos', num: '05', label: 'Gestión de Activos' },
+	{ slug: 'servicio-inspeccion-drones', num: '06', label: 'Inspección y Levantamiento Mediante Drones' },
+	{ slug: 'servicio-qaqc-soldadura', num: '07', label: 'Aseguramiento de Calidad — Soldadura (QAQC)' },
+	{ slug: 'servicio-proteccion-catodica', num: '08', label: 'Evaluación de Sistemas de Protección Catódica' },
+	{ slug: 'servicio-corrosion-interna', num: '09', label: 'Monitoreo y Evaluación de Corrosión Interna' },
+	{ slug: 'servicio-desarrollo-software', num: '10', label: 'Desarrollo de Software a la Medida' },
+	{ slug: 'servicio-rbi-api580', num: '11', label: 'Inspección Basada en Riesgo — API 580' },
+];
+---
+<header id="custom-header">
+	<!-- Top Bar -->
+	<div class="top-bar">
+		<div class="container">
+			<div class="contact-info">
+				<span><i class="fas fa-phone-alt"></i> +601 7943489</span>
+				<span><i class="fas fa-mobile-alt"></i> +57 311 485 0295</span>
+			</div>
+			<div class="market-data">
+				<span id="market-usd" title="TRM Dólar a COP"><i class="fas fa-dollar-sign"></i> USD: <strong id="val-usd">---</strong></span>
+				<span id="market-oil" title="Petróleo BRENT"><i class="fas fa-gas-pump"></i> BRENT: <strong id="val-oil">---</strong></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Navigation -->
+	<div class="main-nav-container">
+		<nav class="floating-nav">
+			<div class="logo">
+				<a href="/index.html">
+					<img src="/css/media/logo-ademincol.png" alt="Ademincol Logo" width="175" height="50">
+				</a>
+			</div>
+			<div class="mobile-menu-toggle">
+				<i class="fas fa-bars"></i>
+			</div>
+			<ul class="nav-links">
+				<li><a href="/index.html" class="nav-link">Inicio</a></li>
+				<li><a href="/nuestra-empresa.html" class="nav-link">Nuestra Empresa</a></li>
+				<li class="nav-item-dropdown">
+					<a href="/Servicios/servicios.html" class="nav-link nav-link-dropdown">
+						Servicios <i class="fas fa-chevron-down nav-chevron"></i>
+					</a>
+					<div class="mega-menu">
+						<div class="mega-grid">
+							{servicios.map((s) => (
+								<a href={`/Servicios/${s.slug}.html`} class="mega-item">
+									<span class="mega-num">{s.num}</span>
+									<div class="mega-text"><strong>{s.label}</strong></div>
+								</a>
+							))}
+						</div>
+						<div class="mega-footer">
+							<a href="/Servicios/servicios.html" class="mega-all-link">Ver todos los servicios <i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
+				</li>
+				<li><a href="/sostenibilidad.html" class="nav-link" style="color:#4A7940;">Sostenibilidad</a></li>
+				<li><a href="/contactenos.html" class="nav-link">Contáctenos</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>

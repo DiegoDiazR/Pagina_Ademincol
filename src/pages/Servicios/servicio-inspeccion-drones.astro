@@ -1,0 +1,57 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/06.Inspeccion y levantamiento Mediante Drones';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Foto_Dron.jpeg`, alt: 'Inspección con dron en campo' },
+	{ src: `${IMG_BASE}/Visual_Remota.jpeg`, alt: 'Inspección visual remota mediante UAV' },
+];
+
+const capacidades = [
+	{ titulo: 'Inspección Visual Remota', detalle: 'Evaluación del estado superficial de estructuras, torres, tanques y equipos en altura.' },
+	{ titulo: 'Termografía', detalle: 'Detección de variaciones anómalas de temperatura, fallas incipientes y pérdidas energéticas.' },
+	{ titulo: 'Aerofotografía / Aerofotogrametría', detalle: 'Captura fotográfica de alta resolución y generación de modelos métricos 3D.' },
+	{ titulo: 'Ortofotografía', detalle: 'Imagen aérea corregida geométricamente con escala uniforme y posición precisa para uso como mapa.' },
+	{ titulo: 'Medición de Espesores Remota', detalle: 'Espesores en tuberías y estructuras sin necesidad de andamiaje.' },
+	{ titulo: 'Inspección de Espacios Confinados Remota', detalle: 'Drones especializados para inspección interior de tanques, silos y ductos.' },
+	{ titulo: 'LiDAR — Topografía', detalle: 'Levantamientos topográficos de alta precisión mediante escaneo láser aéreo.' },
+	{ titulo: 'Evaluación Estructural', detalle: 'Inspección y análisis del estado de estructuras metálicas, puentes y torres.' },
+	{ titulo: 'Modelo Digital de Elevación (DEM)', detalle: 'Representación de la topografía del terreno eliminando elementos superficiales.' },
+	{ titulo: 'Modelo Digital de Superficie (DSM)', detalle: 'Elevación del terreno incluyendo edificaciones, vegetación e infraestructuras.' },
+	{ titulo: 'Curvas de Nivel', detalle: 'Líneas que unen puntos de igual elevación para representar el relieve.' },
+	{ titulo: 'Energía Eólica y Solar', detalle: 'Evaluación de aerogeneradores y paneles solares mediante termografía e inspección visual.' },
+	{ titulo: 'Monitoreo de Ductos y ROW', detalle: 'Vigilancia continua de derecho de vía e integridad de ductos.' },
+	{ titulo: 'Gemelos Digitales', detalle: 'Generación de gemelos digitales para gestión de activos y seguimiento de obras.' },
+];
+
+---
+<ServiceLayout
+	title="Inspección y Levantamiento Mediante Drones - Ademincol SA"
+	description="Inspección con drones (UAV): inspección visual remota, termografía, fotogrametría 3D, LiDAR, ortofotografía y monitoreo de ductos y derecho de vía."
+	canonical="https://ademincol.com.co/servicios/inspeccion-drones"
+	heroTitle="Inspección y Levantamiento Mediante Drones"
+	heroSub="La inspección con UAV optimiza la evaluación de estructuras, tanques y ductos, integrando captura de datos de alta resolución, modelado 3D y análisis térmico dentro de estrategias de inspección basada en riesgo."
+	breadcrumb="Drones"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

@@ -1,0 +1,54 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/04.FFS-simulacion elementos finiftos';
+
+const galeria = [
+	{ src: `${IMG_BASE}/FFF_Tanques.png`, alt: 'Simulación FFS — Tanques de almacenamiento' },
+	{ src: `${IMG_BASE}/FFF_Tuberia.png`, alt: 'Simulación FFS — Sistemas de tubería' },
+];
+
+const capacidades = [
+	{ titulo: 'Evaluación de Defectos — API 579 / ASME FFS-1', detalle: 'Aptitud para el servicio sobre defectos identificados durante la inspección.' },
+	{ titulo: 'Grietas (SCC y otras)', detalle: 'Evaluación de aptitud para el servicio en componentes con grietas por corrosión bajo esfuerzo.' },
+	{ titulo: 'Corrosión — CO2, CUI, Erosión', detalle: 'Evaluación de pérdida de espesor por mecanismos específicos de degradación.' },
+	{ titulo: 'Laminaciones', detalle: 'Análisis de aptitud para el servicio en presencia de laminaciones del material base.' },
+	{ titulo: 'Fatiga Mecánica', detalle: 'Evaluación de vida remanente bajo cargas cíclicas (Mechanical Fatigue).' },
+	{ titulo: 'Deformaciones — Abolladuras y Distorsiones', detalle: 'Análisis de aptitud para el servicio en componentes deformados.' },
+	{ titulo: 'Blistering / HIC / SOHIC', detalle: 'Evaluación de daño por hidrógeno en aceros expuestos a servicio amargo.' },
+	{ titulo: 'Análisis de Flexibilidad', detalle: 'Evaluación de esfuerzos térmicos en sistemas de tubería.' },
+	{ titulo: 'Tanques de Almacenamiento', detalle: 'Evaluación de aptitud para el servicio por deformación y asentamiento.' },
+	{ titulo: 'Recipientes a Presión', detalle: 'Evaluación bajo ASME Sección VIII Div 2 (reactores, drums, intercambiadores, tratadores).' },
+	{ titulo: 'Sistemas de Tubería', detalle: 'Evaluación de esfuerzos y aptitud para el servicio en componentes de tubería.' },
+];
+
+---
+<ServiceLayout
+	title="FFS — Simulación por Elementos Finitos - Ademincol SA"
+	description="Fitness For Service (FFS) bajo API 579 / ASME FFS-1: simulación por elementos finitos para evaluación de aptitud al servicio de tanques, recipientes y sistemas de tubería."
+	canonical="https://ademincol.com.co/servicios/ffs-simulacion"
+	heroTitle="FFS — Simulación por Elementos Finitos"
+	heroSub="Metodología de evaluación aplicada a cualquier activo industrial para determinar su capacidad de operar de forma segura y confiable bajo las condiciones actuales de servicio."
+	breadcrumb="FFS — Elementos Finitos"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

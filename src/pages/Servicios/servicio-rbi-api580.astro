@@ -1,0 +1,52 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/10.Inspeccion Basada en Riesgo -API 580';
+
+const galeria = [
+	{ src: `${IMG_BASE}/API 570-2.png`, alt: 'Inspección bajo API 570 — gestión de riesgo' },
+];
+
+const capacidades = [
+	{ titulo: 'Definición de Segmentos y Áreas de Alta Consecuencia', detalle: 'Identificación de áreas de alta consecuencia mediante análisis de proximidad: población, cruces con vías, cuerpos de agua y áreas ambientales sensibles.' },
+	{ titulo: 'Captura, Revisión e Integración de Datos', detalle: 'Integración de datos de diseño, historial operativo, fallas, mantenimientos, ILI, PH, ECDA, ICDA, SCCDA, protección catódica y geotecnia.' },
+	{ titulo: 'Evaluación de Amenazas', detalle: 'Identificación de amenazas de integridad, modos de falla y mecanismos de daño.' },
+	{ titulo: 'Estimación de Probabilidad de Falla', detalle: 'Evaluación cuantitativa de la materialización de la amenaza.' },
+	{ titulo: 'Estimación de Consecuencias de Falla', detalle: 'Cálculo de consecuencias en términos económicos, de seguridad y ambientales.' },
+	{ titulo: 'Estimación del Nivel y Tolerabilidad del Riesgo', detalle: 'Determinación del nivel de riesgo y comparación con criterios de tolerabilidad.' },
+	{ titulo: 'Plan de Inspección y Mitigación — Línea Base', detalle: 'Desarrollo del plan de inspección y mitigación inicial.' },
+	{ titulo: 'Ejecución del Plan', detalle: 'Implementación de actividades de inspección y mitigación.' },
+	{ titulo: 'Reevaluación del Riesgo', detalle: 'Actualización periódica del análisis con resultados de inspecciones y cambios operativos.' },
+	{ titulo: 'Manejo del Cambio (MOC)', detalle: 'Registro y gestión del cambio en condiciones operativas o de diseño.' },
+	{ titulo: 'Matriz de Riesgo Integrada', detalle: 'Visualización del riesgo (COF × POF) con clasificación configurable.' },
+	{ titulo: 'Software RBI a Medida', detalle: 'Plataforma propia para análisis de riesgo, distribución y proyección de DF e intervalos de inspección.' },
+];
+---
+<ServiceLayout
+	title="Inspección Basada en Riesgo (RBI) — API 580 - Ademincol SA"
+	description="Inspección Basada en Riesgo (RBI) bajo API 580/581, API 1160 y DOT 49 CFR 192/195: definición de áreas de alta consecuencia, análisis de amenazas, evaluación inicial y reevaluación de riesgo."
+	canonical="https://ademincol.com.co/servicios/rbi-api-580"
+	heroTitle="Inspección Basada en Riesgo — API 580"
+	heroSub="Metodología basada en API 1160, DOT 49 CFR 192 y 195 para gestionar el riesgo, priorizar inspecciones y planificar la mitigación a lo largo del ciclo de vida de los activos."
+	breadcrumb="RBI — API 580"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+</ServiceLayout>

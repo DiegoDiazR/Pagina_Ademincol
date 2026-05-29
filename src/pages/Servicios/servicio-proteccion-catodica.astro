@@ -1,0 +1,52 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/08.Evaluacion de sistemas de proteccion catodica';
+
+const galeria = [
+	{ src: `${IMG_BASE}/PCM.jpeg`, alt: 'Pipeline Current Mapper (PCM) en derecho de vía' },
+	{ src: `${IMG_BASE}/Rectificador.jpeg`, alt: 'Rectificador del sistema de protección catódica' },
+];
+
+const capacidades = [
+	{ titulo: 'Estado del Sistema de Protección Catódica', detalle: 'Evaluación del desempeño general del sistema en operación.' },
+	{ titulo: 'Evaluación de Rectificadores', detalle: 'Inspección y verificación funcional de los rectificadores de corriente impresa.' },
+	{ titulo: 'Evaluación de Ánodos de Sacrificio', detalle: 'Verificación del estado, polarización y consumo de ánodos galvánicos.' },
+	{ titulo: 'Inspección CIPS', detalle: 'Close Interval Potential Survey: medición continua del potencial tubo-suelo.' },
+	{ titulo: 'Medición de Aislamiento Eléctrico', detalle: 'Verificación de aislamientos eléctricos y juntas dieléctricas.' },
+	{ titulo: 'Evaluación de Cruces de Encamisados', detalle: 'Inspección de cruces y zonas de transición en ductos enterrados.' },
+	{ titulo: 'Resistividad y Muestra de Suelo', detalle: 'Caracterización del medio agresivo en derecho de vía.' },
+	{ titulo: 'Evaluación del Recubrimiento', detalle: 'Diagnóstico del estado de recubrimiento de la tubería.' },
+	{ titulo: 'PCM-ACVG', detalle: 'Pipeline Current Mapper / Above-Ground Coating Voltage: detección de fallas en recubrimiento.' },
+	{ titulo: 'DCVG', detalle: 'Direct Current Voltage Gradient: localización y dimensionamiento de defectos en recubrimiento.' },
+	{ titulo: 'ECDA — External Corrosion Direct Assessment', detalle: 'Metodología integrada para evaluar y gestionar la corrosión externa en sistemas de tubería.' },
+];
+---
+<ServiceLayout
+	title="Evaluación de Sistemas de Protección Catódica - Ademincol SA"
+	description="Evaluación de protección catódica: rectificadores, ánodos de sacrificio, CIPS, DCVG, PCM-ACVG, ECDA y resistividad de suelos para gestión de corrosión externa."
+	canonical="https://ademincol.com.co/servicios/pruebas-destructivas"
+	heroTitle="Evaluación de Sistemas de Protección Catódica"
+	heroSub="Diagnóstico, mantenimiento y optimización de sistemas de protección catódica para tuberías enterradas, tanques y estructuras metálicas."
+	breadcrumb="Protección Catódica"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Capacidades del Servicio</h2>
+	<div class="service-capabilities-grid">
+		{capacidades.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+</ServiceLayout>

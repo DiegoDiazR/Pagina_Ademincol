@@ -1,0 +1,75 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const IMG_BASE = '/css/media/01.Nuestros Servicios-Tecnicas de Inspeccion Ensayos no Destrictivos';
+
+const galeria = [
+	{ src: `${IMG_BASE}/Equipo_GPR.png`, alt: 'Equipo GPR — Ground Penetrating Radar' },
+	{ src: `${IMG_BASE}/GPR.png`, alt: 'Inspección con GPR en campo' },
+	{ src: `${IMG_BASE}/Particulas_magneticas.jpeg`, alt: 'Ensayo por partículas magnéticas (MT)' },
+];
+
+const convencionales = [
+	{ titulo: 'Inspección Visual (VT)', detalle: 'Evaluación visual directa o asistida para detectar defectos superficiales en componentes, soldaduras y estructuras.' },
+	{ titulo: 'Líquidos Penetrantes (PT)', detalle: 'Detección de discontinuidades superficiales abiertas en materiales no porosos.' },
+	{ titulo: 'Ultrasonido (UT) Scan A/B', detalle: 'Medición de espesores y detección de defectos internos por reflexión de ondas ultrasónicas.' },
+	{ titulo: 'Partículas Magnéticas (MT)', detalle: 'Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos.' },
+	{ titulo: 'Radiografía Industrial (RT)', detalle: 'Evaluación volumétrica de soldaduras y componentes mediante radiación X y Gamma.' },
+];
+
+const emergentes = [
+	{ titulo: 'Ultrasonido TOFD', detalle: 'Time of Flight Diffraction: caracterización volumétrica precisa de defectos en soldaduras.' },
+	{ titulo: 'UT Phased Array (PAUT)', detalle: 'Inspección ultrasónica con haces dirigibles electrónicamente para mapeo detallado.' },
+	{ titulo: 'Corrientes de Eddy / Eddy Pulsadas', detalle: 'Detección de discontinuidades superficiales y subsuperficiales en materiales conductores.' },
+	{ titulo: 'Campo Remoto (RFET)', detalle: 'Inspección interna de tubos de intercambiadores y cambiadores de calor.' },
+	{ titulo: 'Fuga de Campo Magnético (MFL)', detalle: 'Inspección directa del fondo de tanques de almacenamiento.' },
+	{ titulo: 'Ondas Guiadas (GWT)', detalle: 'Inspección de tuberías a larga distancia desde un solo punto de acceso.' },
+	{ titulo: 'ACFM', detalle: 'Alternating Current Field Measurement: detección y dimensionamiento de grietas superficiales sin contacto directo.' },
+	{ titulo: 'MFL — Fondo de Tanques', detalle: 'Inspección directa con detección y discriminación lado suelo / lado producto, cubrimiento incluido zona crítica.' },
+	{ titulo: 'Emisión Acústica (AET)', detalle: 'Monitoreo en tiempo real de la integridad estructural mediante captación de ondas acústicas.' },
+	{ titulo: 'Scanner TRIMBLE X7 / RHINO 3DSL', detalle: 'Captura 3D de alta precisión para evaluación de corrosión externa y gestión de integridad.' },
+	{ titulo: 'RealWear Navigator 500', detalle: 'Realidad asistida para inspección en campo y soporte remoto en tiempo real.' },
+	{ titulo: 'Total Focusing Method (TFM)', detalle: 'Reconstrucción de imágenes ultrasónicas por enfoque total para análisis dimensional preciso.' },
+	{ titulo: 'GPR — Ground Penetrating Radar', detalle: 'Inspección no destructiva de concreto, suelos y refuerzo estructural.' },
+];
+
+---
+<ServiceLayout
+	title="Técnicas de Inspección — Ensayos No Destructivos - Ademincol SA"
+	description="Servicios de Ensayos No Destructivos (END): técnicas convencionales y emergentes — UT, RT, MT, PT, VT, TOFD, PAUT, ACFM, RFET, MFL, ondas guiadas y nuevas tecnologías."
+	canonical="https://ademincol.com.co/servicios/tecnicas-convencionales"
+	heroTitle="Técnicas de Inspección — END"
+	heroSub="Servicios de Ensayos No Destructivos en sus líneas convencional y emergente, complementadas con nuevas tecnologías de digitalización 3D y realidad asistida."
+	breadcrumb="Técnicas END"
+>
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
+	<h2>Técnicas Convencionales</h2>
+	<div class="service-capabilities-grid">
+		{convencionales.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+	<h2>Técnicas Emergentes</h2>
+	<div class="service-capabilities-grid">
+		{emergentes.map((c) => (
+			<div class="capability-item">
+				<i class="fas fa-check-circle"></i>
+				<span><strong>{c.titulo}</strong> — {c.detalle}</span>
+			</div>
+		))}
+	</div>
+
+</ServiceLayout>

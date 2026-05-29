@@ -1,0 +1,233 @@
+---
+import Layout from './Layout.astro';
+import Hero from '../components/Hero.astro';
+
+export interface Props {
+	title: string;
+	description?: string;
+	canonical?: string;
+	heroTitle: string;
+	heroSub: string;
+	breadcrumb: string;
+}
+
+const { title, description, canonical, heroTitle, heroSub, breadcrumb } = Astro.props;
+
+const crumbs = [
+	{ label: 'Inicio', href: '/index.html' },
+	{ label: 'Servicios', href: '/Servicios/servicios.html' },
+	{ label: breadcrumb },
+];
+---
+<Layout title={title} description={description} canonical={canonical}>
+	<main>
+		<Hero
+			variant="red"
+			breadcrumb={crumbs}
+			title={heroTitle}
+			subtitle={heroSub}
+		/>
+
+		<slot name="gallery" />
+
+		<section class="service-content-section">
+			<slot />
+		</section>
+
+		<slot name="extra" />
+	</main>
+</Layout>
+
+<style is:global>
+	.service-content-section {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 70px 20px 60px;
+	}
+	.service-content-section h2 {
+		font-family: Barlow, sans-serif;
+		color: #cf2e2e;
+		font-size: 26px;
+		font-weight: 700;
+		margin: 0 0 28px;
+		padding-bottom: 12px;
+		border-bottom: 2px solid #f0f0f0;
+		text-align: center;
+	}
+	.service-content-section h2 + .service-capabilities-grid {
+		margin-top: 0;
+	}
+	.service-content-section .service-capabilities-grid + h2 {
+		margin-top: 20px;
+	}
+	.service-capabilities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 16px;
+		margin-bottom: 50px;
+	}
+	.capability-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		padding: 18px 20px;
+		background: #fafafa;
+		border-radius: 8px;
+		border-left: 4px solid #cf2e2e;
+		font-size: 14px;
+		line-height: 1.5;
+		color: #333;
+	}
+	.capability-item i {
+		color: #cf2e2e;
+		margin-top: 2px;
+		flex-shrink: 0;
+		font-size: 15px;
+	}
+	.service-cta-section {
+		background: #1a1a1a;
+		color: #fff;
+		padding: 70px 20px;
+		text-align: center;
+	}
+	.service-cta-section h2 {
+		font-family: Barlow, sans-serif;
+		font-size: clamp(24px, 4vw, 36px);
+		font-weight: 800;
+		margin: 0 0 12px;
+	}
+	.service-cta-section p {
+		font-size: 16px;
+		opacity: 0.75;
+		margin-bottom: 28px;
+	}
+	.btn-red {
+		display: inline-block;
+		background: #cf2e2e;
+		color: #fff;
+		padding: 14px 36px;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 15px;
+		transition: background .25s;
+		margin: 6px;
+	}
+	.btn-red:hover { background: #a52020; }
+	.btn-outline {
+		display: inline-block;
+		border: 2px solid rgba(255,255,255,0.4);
+		color: #fff;
+		padding: 12px 32px;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 15px;
+		transition: border-color .25s, background .25s;
+		margin: 6px;
+	}
+	.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+	/* Galería de imágenes (usada en varios servicios) */
+	.service-gallery-section {
+		padding: 60px 20px;
+	}
+	.service-gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 28px;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	.gallery-image {
+		aspect-ratio: 4 / 3;
+		border-radius: 12px;
+		overflow: hidden;
+		background-color: #ffffff;
+		padding: 24px;
+		/* Apilamiento de 2 sombras:
+		   1) contacto: pequeña, apretada, da peso a la base
+		   2) ambiental: enorme y muy difuminada, da volumen y flotación */
+		box-shadow:
+			0 2px 4px rgba(0, 0, 0, 0.04),
+			0 25px 60px rgba(0, 0, 0, 0.06);
+		transition: transform .4s cubic-bezier(0.22, 1, 0.36, 1),
+		            box-shadow .4s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.gallery-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		display: block;
+		/* Capa interna: profundidad propia del diagrama/foto */
+		filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.10));
+	}
+	.gallery-image:hover {
+		/* Al levantarse, la sombra ambiental crece y se difumina más
+		   (más distancia entre tarjeta y "pared" = penumbra mayor) */
+		transform: translateY(-8px);
+		box-shadow:
+			0 4px 8px rgba(0, 0, 0, 0.04),
+			0 40px 90px rgba(0, 0, 0, 0.10);
+	}
+
+	/* Sección Posibles Aplicaciones */
+	.service-applications-section {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 30px 20px 70px;
+	}
+	.applications-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 20px;
+	}
+	.application-card {
+		background: #fafafa;
+		border: 2px dashed #ccc;
+		border-radius: 10px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		min-height: 280px;
+	}
+	.application-card .app-image {
+		aspect-ratio: 4 / 3;
+		border-radius: 8px;
+		overflow: hidden;
+		background: #f5f5f5;
+	}
+	.application-card .app-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		display: block;
+	}
+	.application-card .app-text-placeholder {
+		flex: 1;
+		background: #fff;
+		border: 1px dashed #999;
+		border-radius: 8px;
+		padding: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #888;
+		font-size: 13px;
+		font-style: italic;
+		text-align: center;
+		min-height: 70px;
+	}
+	.application-card .app-text-placeholder i {
+		margin-right: 6px;
+		color: #cf2e2e;
+	}
+
+	@media (max-width: 768px) {
+		.service-gallery-grid { grid-template-columns: 1fr; }
+	}
+	@media (max-width: 600px) {
+		.service-capabilities-grid { grid-template-columns: 1fr; }
+	}
+</style>
