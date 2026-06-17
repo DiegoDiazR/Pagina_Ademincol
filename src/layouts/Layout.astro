@@ -32,6 +32,15 @@ const {
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<!-- Base del API de formularios: en local apunta al backend dev (3001);
+	     en producción usa el mismo origen (Cloudflare Tunnel sirve sitio + /api). -->
+	<script is:inline>
+		window.ADEMINCOL_API_BASE =
+			(location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+				? 'http://localhost:3001'
+				: location.origin;
+	</script>
+
 	<title>{title}</title>
 	<meta name="description" content={description} />
 	<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />

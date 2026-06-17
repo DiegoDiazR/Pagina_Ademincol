@@ -19,3 +19,15 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Media pesada / material crudo — NO subir al repo
+# (grabaciones de drone en bruto: ~4 GB, no usadas por el sitio)
+VIDEOS VARIOS/
+public/css/media/VIDEOS VARIOS/
+# Formatos de video crudo (el unico video usado es el .mp4 del hero, ya rastreado)
+*.mpg
+*.mpeg
+*.mov
+*.avi
+# Brochure pesado (~70 MB): mejor servirlo desde almacenamiento externo
+BROCHURE ADEMINCOL.pdf

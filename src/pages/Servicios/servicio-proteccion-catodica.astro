@@ -6,6 +6,7 @@ const IMG_BASE = '/css/media/08.Evaluacion de sistemas de proteccion catodica';
 const galeria = [
 	{ src: `${IMG_BASE}/PCM.jpeg`, alt: 'Pipeline Current Mapper (PCM) en derecho de vía' },
 	{ src: `${IMG_BASE}/Rectificador.jpeg`, alt: 'Rectificador del sistema de protección catódica' },
+	{ src: `${IMG_BASE}/Proteccion catodica.jpeg`, alt: 'Evaluación de protección catódica en campo' },
 ];
 
 const capacidades = [
@@ -34,7 +35,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

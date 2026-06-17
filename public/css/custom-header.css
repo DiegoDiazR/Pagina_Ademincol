@@ -192,6 +192,18 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
 }
 
+.nav-link-sostenibilidad {
+    color: #4A7940;
+}
+
+.nav-link-sostenibilidad::after {
+    background-color: #4A7940;
+}
+
+.nav-link-sostenibilidad:hover {
+    color: #4A7940;
+}
+
 .mobile-menu-toggle {
     display: none;
     font-size: 24px;
@@ -861,7 +873,8 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
     height: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.6s ease;
 }

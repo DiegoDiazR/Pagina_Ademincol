@@ -5,7 +5,8 @@ const IMG_BASE = '/css/media/06.Inspeccion y levantamiento Mediante Drones';
 
 const galeria = [
 	{ src: `${IMG_BASE}/Foto_Dron.jpeg`, alt: 'Inspección con dron en campo' },
-	{ src: `${IMG_BASE}/Visual_Remota.jpeg`, alt: 'Inspección visual remota mediante UAV' },
+	{ src: `${IMG_BASE}/Visual_Remota.jpeg`, alt: 'Inspección visual remota mediante UAV', pos: 'right center' },
+	{ src: `${IMG_BASE}/Termografia_dron.png`, alt: 'Termografía con dron' },
 ];
 
 const capacidades = [
@@ -38,7 +39,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

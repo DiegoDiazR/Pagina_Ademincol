@@ -143,11 +143,8 @@ const crumbs = [
 		aspect-ratio: 4 / 3;
 		border-radius: 12px;
 		overflow: hidden;
-		background-color: #ffffff;
-		padding: 24px;
-		/* Apilamiento de 2 sombras:
-		   1) contacto: pequeña, apretada, da peso a la base
-		   2) ambiental: enorme y muy difuminada, da volumen y flotación */
+		background-color: #f8f8f8;
+		padding: 6px;
 		box-shadow:
 			0 2px 4px rgba(0, 0, 0, 0.04),
 			0 25px 60px rgba(0, 0, 0, 0.06);
@@ -157,10 +154,10 @@ const crumbs = [
 	.gallery-image img {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		object-fit: cover;
+		object-position: center;
 		display: block;
-		/* Capa interna: profundidad propia del diagrama/foto */
-		filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.10));
+		border-radius: 8px;
 	}
 	.gallery-image:hover {
 		/* Al levantarse, la sombra ambiental crece y se difumina más

@@ -1,6 +1,14 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
+const IMG_BASE = '/css/media/10.Desarrollo_de_software_a_la_medida';
+
+const galeria = [
+	{ src: `${IMG_BASE}/WhatsApp Image 2026-06-10 at 9.05.03 AM.jpeg`, alt: 'Software a la medida para gestión de inspección y activos' },
+	{ src: `${IMG_BASE}/WhatsApp Image 2026-06-10 at 9.07.35 AM.jpeg`, alt: 'Dashboard de análisis y visualización de datos técnicos' },
+	{ src: `${IMG_BASE}/WhatsApp Image 2026-06-10 at 9.08.20 AM.jpeg`, alt: 'Plataforma de software desarrollada a la medida del cliente' },
+];
+
 const capacidades = [
 	{ titulo: 'Bases de Datos SQL / NoSQL', detalle: 'Bases estructuradas para centralizar y organizar la información generada en procesos de inspección y gestión de activos.' },
 	{ titulo: 'Análisis y Visualización en R / Python', detalle: 'Herramientas para integración con bases de datos, procesamiento de información y desarrollo de interfaces gráficas.' },
@@ -20,6 +28,16 @@ const capacidades = [
 	heroSub="Soluciones de software diseñadas a la medida del cliente para centralizar, analizar y visualizar la información técnica de los procesos de inspección y gestión de activos."
 	breadcrumb="Software a la Medida"
 >
+	<section slot="gallery" class="service-gallery-section">
+		<div class="service-gallery-grid">
+			{galeria.map((g) => (
+				<div class="gallery-image">
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+
 	<h2>Capacidades del Servicio</h2>
 	<div class="service-capabilities-grid">
 		{capacidades.map((c) => (

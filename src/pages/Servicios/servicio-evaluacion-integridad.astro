@@ -6,7 +6,7 @@ const IMG_BASE = '/css/media/03.Evaluacion Y Diagnostico del estado de integrida
 const galeria = [
 	{ src: `${IMG_BASE}/Crawler.jpeg`, alt: 'Crawler de inspección interna' },
 	{ src: `${IMG_BASE}/Crawler_2.jpeg`, alt: 'Crawler en tubería de proceso' },
-	{ src: `${IMG_BASE}/Crawler_3.jpeg`, alt: 'Crawler ejecutando levantamiento interno' },
+	{ src: `${IMG_BASE}/Crawler_3.jpeg`, alt: 'Crawler ejecutando levantamiento interno', pos: 'center top' },
 ];
 
 const capacidades = [
@@ -31,7 +31,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

@@ -5,6 +5,8 @@ const IMG_BASE = '/css/media/05.Assessment';
 
 const galeria = [
 	{ src: `${IMG_BASE}/Seguimiento_topografico.jpeg`, alt: 'Seguimiento topográfico de líneas y activos' },
+	{ src: `${IMG_BASE}/Gestion_Activos.png`, alt: 'Gestión de activos de integridad', fit: 'contain' },
+	{ src: `${IMG_BASE}/Assesments.png`, alt: 'Assessment de líneas e integridad estructural' },
 ];
 
 const capacidades = [
@@ -34,7 +36,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-fit: ${g.fit ?? 'cover'}; object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

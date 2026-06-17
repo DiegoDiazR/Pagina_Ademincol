@@ -6,6 +6,7 @@ const IMG_BASE = '/css/media/02.Analisis de laboratorios AFAs y caracterizacion 
 const galeria = [
 	{ src: `${IMG_BASE}/Composición_quimica.jpg`, alt: 'Análisis de composición química' },
 	{ src: `${IMG_BASE}/Microestructura.jpeg`, alt: 'Microestructura de aleaciones metálicas' },
+	{ src: `${IMG_BASE}/Afas.jpeg`, alt: 'Análisis de fallas AFAs' },
 ];
 
 const capacidades = [
@@ -32,7 +33,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

@@ -39,7 +39,27 @@
       "Bash(rm -rf dist/)",
       "Bash(npm run *)",
       "Bash(python -c \"from PIL import Image; img = Image.open\\('Hero_paneles_solares.jpeg'\\); print\\(f'{img.size[0]}x{img.size[1]} ratio={img.size[0]/img.size[1]:.4f}'\\)\")",
-      "Bash(identify \"Hero_paneles_solares.jpeg\")"
+      "Bash(identify \"Hero_paneles_solares.jpeg\")",
+      "Bash(git diff *)",
+      "Bash(xargs -0 '-I{}' sh -c 'if [ -f \"{}\" ]; then sz=$\\(stat -c%s \"{}\" 2>/dev/null\\); if [ \"$sz\" -gt 52428800 ]; then echo \"$\\(\\(sz/1048576\\)\\) MB {}\"; fi; fi')",
+      "Bash(xargs -0 -I{} sh -c '[ -f \"{}\" ] && stat -c%s \"{}\" 2>/dev/null')",
+      "Bash(awk '{s+=$1} END {printf \"%.1f MB\\\\n\", s/1048576}')",
+      "Bash(dir \"C:\\\\Users\\\\Diego\\\\Desktop\\\\Pagina_Ademincol\")",
+      "Bash(dir /s /b src)",
+      "Bash(dir \"C:\\\\Users\\\\Diego\\\\Desktop\\\\Pagina_Ademincol\\\\public\\\\js\")",
+      "Bash(dir \"C:\\\\Users\\\\Diego\\\\Desktop\\\\Pagina_Ademincol\\\\public\")",
+      "Bash(pip --version)",
+      "Bash(python -m py_compile Prueba1.py)",
+      "Bash(pip show *)",
+      "Bash(Select-String \"Name|Version|WARNING\")",
+      "Bash(pip install *)",
+      "Bash(python -m pytest Prueba1.py --collect-only)",
+      "Bash(Remove-Item *)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"industrial inspection services B2B professional Colombia engineering\" --design-system -p \"Ademincol\" -f markdown)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"industrial inspection services B2B professional engineering\" --design-system -p \"Ademincol\" -f markdown)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"accessibility touch interaction responsive mobile\" --domain ux -n 8)",
+      "Bash(Select-String -Path \"C:\\\\Users\\\\Diego\\\\Desktop\\\\Pagina_Ademincol\\\\public\\\\css\\\\custom-header.css\" -Pattern \"about-section|about-container|about-image|about-content|about-metrics\")",
+      "Bash(Select-Object LineNumber, Line)"
     ]
   }
 }

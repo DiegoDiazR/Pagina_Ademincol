@@ -1,10 +1,12 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
-const IMG_BASE = '/css/media/10.Inspeccion Basada en Riesgo -API 580';
+const IMG_BASE = '/css/media/11.Inspeccion Basada en Riesgo -API 580';
 
 const galeria = [
-	{ src: `${IMG_BASE}/API 570-2.png`, alt: 'Inspección bajo API 570 — gestión de riesgo' },
+	{ src: `${IMG_BASE}/API 570-2.png`, alt: 'Inspección bajo API 570 — gestión de riesgo', fit: 'contain' },
+	{ src: `${IMG_BASE}/Heatmap.jpeg`, alt: 'Mapa de calor de riesgo RBI', fit: 'contain' },
+	{ src: `${IMG_BASE}/Mapa.jpeg`, alt: 'Mapa de distribución de riesgo en activos', fit: 'contain' }
 ];
 
 const capacidades = [
@@ -34,7 +36,7 @@ const capacidades = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-fit: ${g.fit ?? 'cover'}; object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

@@ -4,7 +4,7 @@ import ServiceLayout from '../../layouts/ServiceLayout.astro';
 const IMG_BASE = '/css/media/01.Nuestros Servicios-Tecnicas de Inspeccion Ensayos no Destrictivos';
 
 const galeria = [
-	{ src: `${IMG_BASE}/Equipo_GPR.png`, alt: 'Equipo GPR — Ground Penetrating Radar' },
+	{ src: `${IMG_BASE}/Equipo_GPR.png`, alt: 'Equipo GPR — Ground Penetrating Radar', pos: 'center top' },
 	{ src: `${IMG_BASE}/GPR.png`, alt: 'Inspección con GPR en campo' },
 	{ src: `${IMG_BASE}/Particulas_magneticas.jpeg`, alt: 'Ensayo por partículas magnéticas (MT)' },
 ];
@@ -46,7 +46,7 @@ const emergentes = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>

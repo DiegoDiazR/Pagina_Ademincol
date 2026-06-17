@@ -1,12 +1,12 @@
 ---
 import ServiceLayout from '../../layouts/ServiceLayout.astro';
 
-const IMG_BASE = '/css/media/09.Monitoreo y evaluacion de corrosion interna';
+const IMG_BASE = '/css/media/09.Monitoreo y Evaluación de Corrosión Interna';
 
 const galeria = [
-	{ src: `${IMG_BASE}/corrosion interna 4.jpg`, alt: 'Monitoreo de corrosión interna' },
-	{ src: `${IMG_BASE}/corrosion interna 6.jpg`, alt: 'Evaluación de daño interno en tuberías' },
-	{ src: `${IMG_BASE}/corrosion interna 7.jpg`, alt: 'Análisis de corrosión en activos' },
+	{ src: `${IMG_BASE}/Corrosion_interna_1.jpg`, alt: 'Monitoreo de corrosión interna', pos: 'center top' },
+	{ src: `${IMG_BASE}/CUPONES-3.jpg`, alt: 'Evaluación de cupones de corrosión', pos: 'center bottom' },
+	{ src: `${IMG_BASE}/Facilidad.jpg`, alt: 'Instalaciones de análisis', fit: 'contain' },
 ];
 
 const capacidades = [
@@ -25,12 +25,6 @@ const capacidades = [
 	{ titulo: 'Hidrogeoquímica — Diagnóstico y Proyección', detalle: 'Evaluación química del agua para comprender procesos en el yacimiento y la operación.' },
 	{ titulo: 'Rehabilitación de Tuberías y Tanques', detalle: 'Soluciones integrales para mitigación y reparación de activos afectados por corrosión interna.' },
 ];
-
-const aplicaciones = [
-	{ src: `${IMG_BASE}/WhatsApp Image 2025-05-29 at 2.47.34 PM.jpeg`, alt: 'Inspección interna de equipos' },
-	{ src: `${IMG_BASE}/WhatsApp Image 2025-05-29 at 2.47.38 PM.jpeg`, alt: 'Monitoreo de espesores' },
-	{ src: `${IMG_BASE}/4a4525ca-cfe8-4565-99d6-ee6e7fe378e8.jpg`, alt: 'Análisis de mecanismos de corrosión' },
-];
 ---
 <ServiceLayout
 	title="Monitoreo y Evaluación de Corrosión Interna - Ademincol SA"
@@ -44,7 +38,7 @@ const aplicaciones = [
 		<div class="service-gallery-grid">
 			{galeria.map((g) => (
 				<div class="gallery-image">
-					<img src={g.src} alt={g.alt} loading="lazy" />
+					<img src={g.src} alt={g.alt} style={`object-fit: ${g.fit ?? 'cover'}; object-position: ${g.pos ?? 'center'}`} loading="lazy" />
 				</div>
 			))}
 		</div>
@@ -60,19 +54,4 @@ const aplicaciones = [
 		))}
 	</div>
 
-	<section slot="extra" class="service-applications-section">
-		<h2 style="font-family:Barlow,sans-serif;color:#cf2e2e;font-size:26px;font-weight:700;margin:0 0 28px;padding-bottom:12px;border-bottom:2px solid #f0f0f0;">Posibles Aplicaciones</h2>
-		<div class="applications-grid">
-			{aplicaciones.map((a) => (
-				<div class="application-card">
-					<div class="app-image">
-						<img src={a.src} alt={a.alt} loading="lazy" />
-					</div>
-					<div class="app-text-placeholder">
-						<span><i class="fas fa-pen"></i> Insertar texto</span>
-					</div>
-				</div>
-			))}
-		</div>
-	</section>
 </ServiceLayout>
