@@ -31,3 +31,4 @@ public/css/media/VIDEOS VARIOS/
 *.avi
 # Brochure pesado (~70 MB): mejor servirlo desde almacenamiento externo
 BROCHURE ADEMINCOL.pdf
+.claude/

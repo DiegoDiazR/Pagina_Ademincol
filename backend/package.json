@@ -4,8 +4,8 @@
   "description": "Backend de formularios (Cotizacion y PQRSF) para el sitio de Ademincol SA",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node --env-file=.env server.js",
+    "dev": "node --env-file=.env --watch server.js"
   },
   "engines": {
     "node": ">=22"

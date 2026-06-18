@@ -160,7 +160,7 @@ import Hero from '../components/Hero.astro';
 		</section>
 
 		<section class="contact-map-section">
-			<h2 style="color: red;">¿Dónde Estamos?</h2>
+			<h2>¿Dónde Estamos?</h2>
 			<iframe
 				src="https://maps.google.com/maps?q=Calle+163+%2316A-63+Toberin+Bogota+Colombia&output=embed&hl=es"
 				allowfullscreen=""
@@ -295,7 +295,8 @@ import Hero from '../components/Hero.astro';
 	.form-group input:focus,
 	.form-group select:focus,
 	.form-group textarea:focus {
-		outline: none;
+		outline: 2px solid #cf2e2e;
+		outline-offset: 2px;
 		border-color: #cf2e2e;
 	}
 	.form-group textarea {

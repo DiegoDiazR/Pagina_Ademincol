@@ -59,7 +59,8 @@
       "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"industrial inspection services B2B professional engineering\" --design-system -p \"Ademincol\" -f markdown)",
       "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"accessibility touch interaction responsive mobile\" --domain ux -n 8)",
       "Bash(Select-String -Path \"C:\\\\Users\\\\Diego\\\\Desktop\\\\Pagina_Ademincol\\\\public\\\\css\\\\custom-header.css\" -Pattern \"about-section|about-container|about-image|about-content|about-metrics\")",
-      "Bash(Select-Object LineNumber, Line)"
+      "Bash(Select-Object LineNumber, Line)",
+      "mcp__plugin_claude-mem_mcp-search__get_observations"
     ]
   }
 }

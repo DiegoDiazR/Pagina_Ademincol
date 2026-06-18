@@ -6,7 +6,8 @@
     if (!toggle || !navLinks) return;
 
     toggle.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     // Mega menu toggle on mobile (tap on "Servicios")
