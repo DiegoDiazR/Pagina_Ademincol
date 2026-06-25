@@ -15,7 +15,7 @@ Ejecutar todas las pruebas:
 Ejecutar solo un grupo:
   pytest Prueba1.py -v -k "cotizacion"
   pytest Prueba1.py -v -k "pqrsf"
-  pytest Prueba1.py -v -k "admin"
+  pytest Prueba1.py -v -k "admin"   
   pytest Prueba1.py -v -k "seguridad"
 
 Ver reporte de cobertura de casos:
